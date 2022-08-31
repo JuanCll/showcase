@@ -3,22 +3,19 @@ title: Introduction
 type: docs
 ---
 
-# Showcase Template
+# Computación Visual
 
-Welcome to the [gohugo](https://gohugo.io/) template to create rich content [academic reports](https://www.wordy.com/writers-workshop/writing-an-academic-report/) having [p5.js](https://p5js.org/) sketches.
+En esta página encontrara los reportes academicos correspondientes al grupo.
 
-## Hacking
+## Integrantes
 
-Install the [gohugo](https://gohugo.io/) [static site generator](https://jamstack.org/generators/) then:
-
-```sh
-$git clone https://github.com/VisualComputing/showcase
-$cd showcase
-$git submodule update --init --recursive
-$hugo server -D --disableFastRender
-```
-
-Deploy with `$git push` after redefined `baseURL` in `config.toml` which should point to your actual public remote.
+{{< hint info >}}
+**Markdown content**  
+Juan Felipe Callejas Fracica 
+Juliette Sofia Lizarazo Ardila 
+Andrés Felipe López Gutiérrez 
+Santiago Sánchez Mora
+{{< /hint >}}
 
 ### Remarks
 
