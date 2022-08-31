@@ -8,11 +8,11 @@ Primer taller
 
 {{< details title="p5-lines markdown" open=false >}}
 {{< highlight html >}}
-{{</* p5-iframe sketch="/showcase/sketches/illusion_lines.js" width="550" height="550" */>}}
+{{</* p5-iframe sketch="/showcase/sketches/illusion_lines.js" width="520" height="520" */>}}
 {{< /highlight >}}
 {{< /details >}}
 
-{{< p5-iframe sketch="/showcase/sketches/illusion_lines.js" width="550" height="550" >}}
+{{< p5-iframe sketch="/showcase/sketches/illusion_lines.js" width="520" height="520" >}}
 
 ## Ilusión de cuadricula
 
@@ -20,9 +20,9 @@ Ilusión sicológica
 
 {{< details title="p5-grid markdown" open=false >}}
 {{< highlight html >}}
-{{</* p5-iframe sketch="/showcase/sketches/illusion_Grid.js" width="450" height="450" */>}}
+{{</* p5-iframe sketch="/showcase/sketches/illusion_Grid.js" width="420" height="420" */>}}
 {{< /highlight >}}
 {{< /details >}}
 
-{{< p5-iframe sketch="/showcase/sketches/illusion_Grid.js" width="450" height="450" >}}
+{{< p5-iframe sketch="/showcase/sketches/illusion_Grid.js" width="420" height="420" >}}
 
