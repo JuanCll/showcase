@@ -20,8 +20,8 @@ function draw() {
   pop();
 
   point(300, 300);
-  stroke("blue"); // Change the color
-  strokeWeight(3); // Make the points 10 pixels in size
+  stroke("blue"); 
+  strokeWeight(5); 
 }
 
 function mousePressed() {
