@@ -33,11 +33,11 @@ Esta ilusion se encuentra incluso en la fachada de un conocido edificio.
 
 {{< details title="p5-grid markdown" open=false >}}
 {{< highlight html >}}
-{{</* p5-iframe sketch="/showcase/sketches/illusion_paralelas.js" width="420" height="420" */>}}
+{{</* p5-iframe sketch="/showcase/sketches/illusion_paralelas.js" width="420" height="425" */>}}
 {{< /highlight >}}
 {{< /details >}}
 
-{{< p5-iframe sketch="/showcase/sketches/illusion_paralelas.js" width="420" height="420" >}}
+{{< p5-iframe sketch="/showcase/sketches/illusion_paralelas.js" width="420" height="425" >}}
 
 ## Ilusión cuadrado que "respira"
 
