@@ -21,7 +21,7 @@ function draw() {
 
   point(300, 300);
   stroke("blue"); 
-  strokeWeight(5); 
+  strokeWeight(10); 
 }
 
 function mousePressed() {
