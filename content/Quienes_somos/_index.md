@@ -1,7 +1,13 @@
 ---
 menu:
   after:
-    name: blog
+    name: Quienes somos
     weight: 5
-title: Blog
+title: Quienes somos
+
+bookCollapseSection: true
 ---
+## Integrantes
+El grupo está conformado por
+
+{{<section>}}
