@@ -47,7 +47,7 @@ La primera vez que se reporto esta ilusion fue en una pared de una cafetería, e
 El efecto desaparece cuando el blanco y el negro son reemplazados por colores diferentes, pero del mismo brillo.
 
 
-![Paralelas sin ilusión](sketches/paralelas_no_ilusion.png)
+{{< p5-iframe sketch="/showcase/sketches/no_illusion_paralelas.js" width="420" height="425" >}}
 
 
 ## Ilusión cuadrado que "respira"
