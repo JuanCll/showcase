@@ -19,12 +19,14 @@ Las curvas de Bézier han sido ampliamente usadas en los gráficos generados por
 {{< p5-iframe sketch="/showcase/sketches/illusion_lines.js" width="525" height="525" >}}
 
 ## Ilusión de cuadricula
-
+{{< hint info >}}
 Ilusión psicológica en la cual se ven puntos en las intersecciones que aparecen y desaparecen.
 La ilusión de la cuadrícula de Hermann fue observada por Ludimar Hermann en 1870. Es muy similar a la anterior, cuando se mira un dibujo con una cuadrícula blanca sobre un fondo negro, se tiene la impresión de que surgen manchas "fantasmas" en las intersecciones de las líneas. Las manchas desaparecen cuando se observa directamente la intersección. Eso explica por qué se ven puntos en la intersección.
 -[Articulo de Wikipedia](https://es.wikipedia.org/wiki/Ilusión_de_la_cuadrícula)
 
 Aunque no hay una respuesta definitiva, se cree que ocurre por un proceso de inhibición neural lateral, en el que no interviene una sola célula o receptor en el campo visual, sino todo un conjunto de células que reaccionan ante los estímulos que se presentan.    -[Psicoactiva](https://www.psicoactiva.com/blog/ilusion-optica-de-la-cuadricula/)
+
+{{< /hint >}}
 
 {{< details title="p5-grid" open=false >}}
 {{< highlight html >}}
@@ -76,12 +78,12 @@ La falta de información del objeto completo hace que las imagenes rotando tenga
 {{< p5-iframe sketch="/showcase/sketches/breathing_square.js" width="425" height="425" >}}
 
 ## Ilusión cuadrados rotando
-
+{{< hint info >}}
 En este caso despues de observar el punto en el centro de los cuadrados rotanto durante un tiempo, una vez pausado se produce una sensación de movimiento en sentido contrario y mucho más lento.
 En este caso relacionamos este efecto al fenomeno de afterimage, que si bien no es exactamente igual puede tener similitudes en como funciona.
 Ademas se pueden relaconar a ilusiones en las que se encuentran gran cantidad de figuras geometricas iguales y tonalidades de color distintas, lo que hace que el cerebro reciba mucha información simultanea y de lugar a estos efectos.
+{{< /hint >}}
 
-{{< hint info >}}
 
 {{< details title="p5-squares" open=false >}}
 {{< highlight html >}}
@@ -91,4 +93,4 @@ Ademas se pueden relaconar a ilusiones en las que se encuentran gran cantidad de
 
 {{< p5-iframe sketch="/showcase/sketches/squares_rotating.js" width="625" height="625" >}}
 
-{{< /hint >}}
+
