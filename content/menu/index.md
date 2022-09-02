@@ -3,6 +3,6 @@ headless: true
 ---
 
 - **Shortcodes**
-- [1_Workshop]({{< relref "/docs/shortcodes/1_Workshop" >}})
+- [Primer_Taller]({{< relref "/docs/shortcodes/Workshop1" >}})
 
 <br />
