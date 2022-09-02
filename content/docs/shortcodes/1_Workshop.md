@@ -28,8 +28,11 @@ Ilusión psicológica en la cual se ven puntos en las intersecciones que aparece
 
 ## Ilusión de paralelas
 
-Ilusión óptica en la cual las lineas horizontales rectas paralelas parecen no ser derechas.
-Esta ilusion se encuentra incluso en la fachada de un conocido edificio.
+{{< hint [info] >}}
+La ilusión de la pared de la cafetería es un tipo de ilusión óptico-geométrica, en la que líneas rectas paralelas  que dividien líneas entre filas formadas por baldosas blancas y negras alternas y escalonadas, aparentan estar inclinadas.
+
+La ilusión fue atribuida en gran parte al fenómeno de la irradiación, y a la dispersión de la luz entre zonas oscuras y zonas brillantes en la imagen retinal.
+{{< /hint >}}
 
 {{< details title="p5-grid markdown" open=false >}}
 {{< highlight html >}}
