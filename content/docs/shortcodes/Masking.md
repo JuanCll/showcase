@@ -1,4 +1,0 @@
-##Image Kernels
-
-
-##Image Histogram
