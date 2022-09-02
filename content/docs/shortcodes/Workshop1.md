@@ -28,7 +28,7 @@ Ilusión psicológica en la cual se ven puntos en las intersecciones que aparece
 
 ## Ilusión de paralelas
 
-{{< hint [info] >}}
+{{< hint info >}}
 La ilusión de la pared de la cafetería es un tipo de ilusión óptico-geométrica, en la que líneas rectas paralelas  que dividien líneas entre filas formadas por baldosas blancas y negras alternas y escalonadas, aparentan estar inclinadas.
 
 La ilusión fue atribuida en gran parte al fenómeno de la irradiación, y a la dispersión de la luz entre zonas oscuras y zonas brillantes en la imagen retinal.
