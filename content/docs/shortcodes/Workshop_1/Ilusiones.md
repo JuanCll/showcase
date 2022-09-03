@@ -54,8 +54,9 @@ La primera vez que se reporto esta ilusion fue en una pared de una cafetería, e
 
 {{< p5-iframe sketch="/showcase/sketches/illusion_paralelas.js" width="420" height="425" >}}
 
+{{< hint warning >}}
 El efecto desaparece cuando el blanco y el negro son reemplazados por colores diferentes, pero del mismo brillo.
-
+{{< /hint >}}
 
 {{< p5-iframe sketch="/showcase/sketches/no_illusion_paralelas.js" width="420" height="425" >}}
 
