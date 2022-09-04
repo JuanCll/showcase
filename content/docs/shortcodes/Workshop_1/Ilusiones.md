@@ -1,4 +1,4 @@
-# **Workshop #1**
+# **Workshop #1: Ilusiones Ópticas**
 
 ## **Introducción**
 Una ilusión óptica es una distorsión de la realidad que es percibida por el sentido de la vista. Este tipo de fenómeno ha permitido el estudio de cómo los seres humanos procesan la información, adicionalmente, a lo largo de la historia se ha buscado recrear y experimentar con los sentidos de esta manera. Lo anterior, es el objetivo del siguiente informe, obteniendo una aproximación, no solo de cómo programar y experimentar con diferentes ilusiones, si no también entender el trasfondo científico que sustentan este comportamiento, consiguiendo la apropiada introducción a la computación visual.
