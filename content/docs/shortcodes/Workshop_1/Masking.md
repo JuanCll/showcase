@@ -18,13 +18,17 @@ Estos histogramas tienen diferentes aplicaciones en edición  y procesamiento de
 -[Articulo de Wikipedia](https://en.wikipedia.org/wiki/Image_histogram)
 {{< /hint >}}
 
-Histograma imagenes
+Histograma imágenes
 
 ## Lightness
 {{< hint info >}}
 La luminosidad, también llamada claridad, es una propiedad de los colores. Ella da una indicación sobre el aspecto luminoso del color estudiado: cuanto más oscuro es el color, la luminosidad es más débil.
 Sin embargo la se le puede dar más de una definición, una de las más simples por ejemplo el promedio aritmético entre sus tres componentes en el modelo RGB.
 -[Articulo de Wikipedia](https://en.wikipedia.org/wiki/HSL_and_HSV#Lightness)
+{{< /hint >}}
+
+{{< hint warning >}}
+Para aumentar el brillo utilice la tecla "+", para disminuirlo utilice la tecla "-"
 {{< /hint >}}
 
 {{< p5-iframe sketch="/showcase/sketches/lightness.js" width="525" height="525" >}}
