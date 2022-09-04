@@ -5,11 +5,11 @@ let sel;
 
 
 function preload() {
-  img = loadImage('Images/acertijo_bat.jpg');
+  img = loadImage('/showcase/sketches/escudo_unal.jpg');
 }
 
 function setup() { 
-  createCanvas(300, 300);
+  createCanvas(500, 500);
   pixelDensity(1);  
 }
 

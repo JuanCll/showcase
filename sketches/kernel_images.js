@@ -5,7 +5,7 @@ let sel;
 
 
 function preload() {
-  img = loadImage('/showcase/sketches/escudo_unal.jpg');
+  img = loadImage('/showcase/sketches/escudo_unal_f.png');
 }
 
 function setup() {
