@@ -18,6 +18,8 @@ Estos histogramas tienen diferentes aplicaciones en edición  y procesamiento de
 -[Articulo de Wikipedia](https://en.wikipedia.org/wiki/Image_histogram)
 {{< /hint >}}
 
+Histograma
+
 ## Lightness
 {{< hint info >}}
 La luminosidad, también llamada claridad, es una propiedad de los colores. Ella da una indicación sobre el aspecto luminoso del color estudiado: cuanto más oscuro es el color, la luminosidad es más débil.

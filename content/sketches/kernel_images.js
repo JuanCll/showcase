@@ -5,7 +5,7 @@ let sel;
 
 
 function preload() {
-  img = loadImage('sketches/acertijo_bat.jpg');
+  img = loadImage('/showcase/sketches/acertijo_bat.jpg');
 }
 
 function setup() {
