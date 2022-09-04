@@ -20,65 +20,45 @@ function setup() {
   
   createCanvas(500, 310);
   pixelDensity(1);
-  newimg = createImage(img.width, img.width); 
+  newimg = createImage(img.width, img.width);
+  
 }
 
 function draw() {
+  
   background(225);
   image(img, 0, 0);
+  
   let sizem = 3;
+  
   newimg.loadPixels();
   img.loadPixels();
   /*xm = mouseX;
   ym = mouseY;
   */
-  if (sel.value() !== 'Identity') {   
+  if (sel.value() !== 'Identity') {
+    
     matrix = selection(sel.value());
     for (var x = 0; x < newimg.width; x++) {
       for (var y = 0; y < newimg.height; y++) {
         let c = convolution(img, x, y, matrix, sizem);
         var index =  (y * newimg.width + x) * 4;
+
         newimg.pixels[index] = c[0];
         newimg.pixels[index + 1] = c[1];
         newimg.pixels[index + 2] = c[2];
         newimg.pixels[index + 3] = 255;
+
       }
-    } 
+    }
+    
     newimg.updatePixels();
     image(newimg, width/2, 0);
   } else {
-    image(img, width/2, 0); 
+    image(img, width/2, 0);
+    
   }
-  var rango = 256
-  image(newimg, 0, 0);
-  var histogram = new Array(rango);
-  for (i = 0; i <= rango; i++) {
-    histogram[i] = 0
-  }
-  loadPixels();
-  for (var x1 = 0; x1 < newimg.width; x1+=5) {
-    for (var y1 = 0; y1 < newimg.height; y1+=5) {
-      var indice = (x1 + y1 * newimg.width) * 4;
-      var a = pixels[indice];
-      var a2 = pixels[indice + 1];
-      var a3 = pixels[indice + 2];
-      var a4 = pixels[indice + 3];
-      b = int(a3);
-      histogram[b]++
-    }
-  }
-  image(img, 0, 0);
-  stroke(250,20,200)
-  push()
-  translate(280,0)
-  for (x1 = 0; x1 <= rango; x1++) {
-    index2 = histogram[x1];
-    y2=int(map(index2, 0, max(histogram), height, height-200));
-		y3 = height
-    xPos = map(x1,0,rango,0, width-20)
-    line(xPos, y2, xPos, y3);
-  }
-  pop()
+
 }
 
 function convolution(img, x, y, matrix, sizem) {
