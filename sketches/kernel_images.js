@@ -20,7 +20,7 @@ function setup() {
   sel.option('Unsharp masking');
   
   //Creation of canvas and a new empty image 
-  createCanvas(850, 550);
+  createCanvas(750, 550);
   pixelDensity(1);
   newimg = createImage(img.width, img.width);
   
