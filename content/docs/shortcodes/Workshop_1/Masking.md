@@ -35,4 +35,4 @@ Estos histogramas tienen diferentes aplicaciones en edición  y procesamiento de
 
 
 ### Aplicación con todos los casos anteriores juntos
-{{< p5-iframe sketch="/showcase/sketches/todo_kernel.js" width="530" height="450" >}}
+{{< p5-iframe sketch="/showcase/sketches/todo_kernel.js" width="530" height="460" >}}
