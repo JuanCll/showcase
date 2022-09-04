@@ -6,7 +6,7 @@ La convolución puede ser aplicada a dos funciones cualesquiera de tiempo o espa
 {{< /hint >}}
 
 
-{{< p5-iframe sketch="/showcase/sketches/kernel_images.js" width="775" height="575" >}}
+{{< p5-iframe sketch="/showcase/sketches/kernel_images.js" width="675" height="575" >}}
 
 
 ## Image Histogram
@@ -26,3 +26,5 @@ La luminosidad, también llamada claridad, es una propiedad de los colores. Ella
 Sin embargo la se le puede dar más de una definición, una de las más simples por ejemplo el promedio aritmético entre sus tres componentes en el modelo RGB.
 -[Articulo de Wikipedia](https://en.wikipedia.org/wiki/HSL_and_HSV#Lightness)
 {{< /hint >}}
+
+{{< p5-iframe sketch="/showcase/sketches/lightness.js" width="525" height="525" >}}
