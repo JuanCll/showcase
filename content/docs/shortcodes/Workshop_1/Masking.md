@@ -18,7 +18,7 @@ Estos histogramas tienen diferentes aplicaciones en edición  y procesamiento de
 -[Articulo de Wikipedia](https://en.wikipedia.org/wiki/Image_histogram)
 {{< /hint >}}
 
-Histograma de imágen
+Histograma imagenes
 
 ## Lightness
 {{< hint info >}}
