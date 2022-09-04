@@ -18,7 +18,7 @@ La convolución puede ser aplicada a dos funciones cualesquiera de tiempo o espa
 {{< /hint >}}
 
 
-{{< p5-iframe sketch="/showcase/sketches/kernel_images.js" width="530" height="350" >}}
+{{< p5-iframe sketch="/showcase/sketches/kernel_images.js" width="530" height="355" >}}
 
 
 ## Lightness
@@ -32,4 +32,4 @@ Sin embargo la se le puede dar más de una definición, una de las más simples 
 Para aumentar el brillo utilice la tecla "+", para disminuirlo utilice la tecla "-"
 {{< /hint >}}
 
-{{< p5-iframe sketch="/showcase/sketches/lightness.js" width="480" height="335" >}}
+{{< p5-iframe sketch="/showcase/sketches/lightness.js" width="570" height="335" >}}
