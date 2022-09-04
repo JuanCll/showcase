@@ -1,13 +1,3 @@
-## Image Kernels
-{{< hint info >}}
-En procesamiento de imágenes un kernel, matriz de convolución o mask es una matriz utilizada para realizar ciertos cambio en una imágen. Esto se consigue haciendo una convolucion entre la imagen y el kernel.
-Una convolución es un proceso matemático en el cual cada elemento de la imágen se suma con sus vecinos y se opera con la matriz.  -[Articulo de Wikipedia](https://en.wikipedia.org/wiki/Kernel_%28image_processing%29#Convolution)
-La convolución puede ser aplicada a dos funciones cualesquiera de tiempo o espacio (u otras variables) para arrojar una tercera función, la salida de la convolución. -[Energy Glossary](https://glossary.slb.com/es/terms/c/convolution#:~:text=Una%20operación%20matemática%20con%20dos,la%20salida%20de%20la%20convolución.)
-{{< /hint >}}
-
-
-{{< p5-iframe sketch="/showcase/sketches/kernel_images.js" width="740" height="500" >}}
-
 
 ## Image Histogram
 {{< hint info >}}
@@ -18,7 +8,18 @@ Estos histogramas tienen diferentes aplicaciones en edición  y procesamiento de
 -[Articulo de Wikipedia](https://en.wikipedia.org/wiki/Image_histogram)
 {{< /hint >}}
 
-Histograma imágenes p
+
+
+## Image Kernels
+{{< hint info >}}
+En procesamiento de imágenes un kernel, matriz de convolución o mask es una matriz utilizada para realizar ciertos cambio en una imágen. Esto se consigue haciendo una convolucion entre la imagen y el kernel.
+Una convolución es un proceso matemático en el cual cada elemento de la imágen se suma con sus vecinos y se opera con la matriz.  -[Articulo de Wikipedia](https://en.wikipedia.org/wiki/Kernel_%28image_processing%29#Convolution)
+La convolución puede ser aplicada a dos funciones cualesquiera de tiempo o espacio (u otras variables) para arrojar una tercera función, la salida de la convolución. -[Energy Glossary](https://glossary.slb.com/es/terms/c/convolution#:~:text=Una%20operación%20matemática%20con%20dos,la%20salida%20de%20la%20convolución.)
+{{< /hint >}}
+
+
+{{< p5-iframe sketch="/showcase/sketches/kernel_images.js" width="530" height="340" >}}
+
 
 ## Lightness
 {{< hint info >}}

@@ -5,11 +5,11 @@ let sel;
 
 
 function preload() {
-  img = loadImage('/showcase/sketches/escudo_unal.jpg');
+  img = loadImage('/showcase/sketches/perro_foto.jpg');
 }
 
 function setup() { 
-  createCanvas(450, 550);
+  createCanvas(545, 315);
   pixelDensity(1);  
 }
 
