@@ -53,9 +53,9 @@ function draw() {
     }
     
     newimg.updatePixels();
-    image(newimg, width, 0);
+    image(newimg, width/2, 0);
   } else {
-    image(img, width, 0);
+    image(img, width/2, 0);
     
   }
   
