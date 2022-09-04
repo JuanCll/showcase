@@ -18,7 +18,7 @@ Estos histogramas tienen diferentes aplicaciones en edición  y procesamiento de
 -[Articulo de Wikipedia](https://en.wikipedia.org/wiki/Image_histogram)
 {{< /hint >}}
 
-Histograma imágenes 
+Histograma imágenes p
 
 ## Lightness
 {{< hint info >}}
@@ -31,4 +31,4 @@ Sin embargo la se le puede dar más de una definición, una de las más simples 
 Para aumentar el brillo utilice la tecla "+", para disminuirlo utilice la tecla "-"
 {{< /hint >}}
 
-{{< p5-iframe sketch="/showcase/sketches/lightness.js" width="520" height="540" >}}
+{{< p5-iframe sketch="/showcase/sketches/lightness.js" width="520" height="575" >}}
