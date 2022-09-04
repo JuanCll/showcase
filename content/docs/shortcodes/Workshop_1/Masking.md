@@ -6,7 +6,7 @@ La convolución puede ser aplicada a dos funciones cualesquiera de tiempo o espa
 {{< /hint >}}
 
 
-{{< p5-iframe sketch="/showcase/sketches/kernel_images.js" width="695" height="490" >}}
+{{< p5-iframe sketch="/showcase/sketches/kernel_images.js" width="715" height="495" >}}
 
 
 ## Image Histogram
@@ -31,4 +31,4 @@ Sin embargo la se le puede dar más de una definición, una de las más simples 
 Para aumentar el brillo utilice la tecla "+", para disminuirlo utilice la tecla "-"
 {{< /hint >}}
 
-{{< p5-iframe sketch="/showcase/sketches/lightness.js" width="500" height="575" >}}
+{{< p5-iframe sketch="/showcase/sketches/lightness.js" width="480" height="575" >}}
