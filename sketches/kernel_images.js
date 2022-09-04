@@ -5,7 +5,7 @@ let sel;
 
 
 function preload() {
-  img = loadImage('/showcase/sketches/unal_escudo_f.jpg');
+  img = loadImage('/showcase/sketches/escudo_unal_dim.jpg');
 }
 
 function setup() {
@@ -18,7 +18,7 @@ function setup() {
   sel.option('Convolution');
   sel.option('Unsharp masking');
   
-  createCanvas(650, 550);
+  createCanvas(450, 550);
   pixelDensity(1);
   newimg = createImage(img.width, img.width);
   
