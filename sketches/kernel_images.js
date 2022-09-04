@@ -18,7 +18,7 @@ function setup() {
   sel.option('Convolution');
   sel.option('Unsharp masking');
   
-  createCanvas(500, 315);
+  createCanvas(500, 310);
   pixelDensity(1);
   newimg = createImage(img.width, img.width);
   
