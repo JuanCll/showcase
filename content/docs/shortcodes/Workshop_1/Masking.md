@@ -1,17 +1,3 @@
-
-## Image Histogram
-{{< hint info >}}
-Un histograma de imágen es un tipo de histograma que actua como una representación gráfica de la distribución tonal de una imágen digital.
-El eje horizontal representa las variaciones tonales, mientras que el eje vertical representa el número total de pixeles en un tono en particular.
-En la parte izquierda del eje horizontal se encuentran las áreas mas oscuras y en la parte derecha las más luminosas.
-Estos histogramas tienen diferentes aplicaciones en edición  y procesamiento de imágenes.
--[Articulo de Wikipedia](https://en.wikipedia.org/wiki/Image_histogram)
-{{< /hint >}}
-
-{{< p5-iframe sketch="/showcase/sketches/histograms.js" width="390" height="475" >}}
-
-
-
 ## Image Kernels
 {{< hint info >}}
 En procesamiento de imágenes un kernel, matriz de convolución o mask es una matriz utilizada para realizar ciertos cambio en una imágen. Esto se consigue haciendo una convolucion entre la imagen y el kernel.
@@ -35,3 +21,18 @@ Para aumentar el brillo utilice la tecla "+", para disminuirlo utilice la tecla 
 {{< /hint >}}
 
 {{< p5-iframe sketch="/showcase/sketches/lightness.js" width="570" height="335" >}}
+
+## Image Histogram
+{{< hint info >}}
+Un histograma de imágen es un tipo de histograma que actua como una representación gráfica de la distribución tonal de una imágen digital.
+El eje horizontal representa las variaciones tonales, mientras que el eje vertical representa el número total de pixeles en un tono en particular.
+En la parte izquierda del eje horizontal se encuentran las áreas mas oscuras y en la parte derecha las más luminosas.
+Estos histogramas tienen diferentes aplicaciones en edición  y procesamiento de imágenes.
+-[Articulo de Wikipedia](https://en.wikipedia.org/wiki/Image_histogram)
+{{< /hint >}}
+
+{{< p5-iframe sketch="/showcase/sketches/histograms.js" width="390" height="475" >}}
+
+
+### Aplicación con todos los casos anteriores juntos
+{{< p5-iframe sketch="/showcase/sketches/todo_kernel.js" width="390" height="475" >}}
