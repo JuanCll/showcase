@@ -8,7 +8,7 @@ Estos histogramas tienen diferentes aplicaciones en edición  y procesamiento de
 -[Articulo de Wikipedia](https://en.wikipedia.org/wiki/Image_histogram)
 {{< /hint >}}
 
-{{< p5-iframe sketch="/showcase/sketches/lightness.js" width="390" height="475" >}}
+{{< p5-iframe sketch="/showcase/sketches/histogram.js" width="390" height="475" >}}
 
 
 
