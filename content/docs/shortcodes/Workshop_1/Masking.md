@@ -5,6 +5,15 @@ Una convolución es un proceso matemático en el cual cada elemento de la imáge
 La convolución puede ser aplicada a dos funciones cualesquiera de tiempo o espacio (u otras variables) para arrojar una tercera función, la salida de la convolución. -[Energy Glossary](https://glossary.slb.com/es/terms/c/convolution#:~:text=Una%20operación%20matemática%20con%20dos,la%20salida%20de%20la%20convolución.)
 {{< /hint >}}
 
+{{< details title="p5-kernel_images" open=false >}}
+{{< highlight html >}}
+{{</* p5-iframe sketch="/showcase/sketches/illusion_paralelas.js" width="455" height="325" */>}}
+{{< /highlight >}}
+{{< /details >}}
+
+{{< p5-iframe sketch="/showcase/sketches/illusion_paralelas.js" width="455" height="325" >}}
+
+
 ## Image Histogram
 {{< hint info >}}
 Un histograma de imágen es un tipo de histograma que actua como una representación gráfica de la distribución tonal de una imágen digital.
