@@ -5,13 +5,12 @@ let sel;
 
 
 function preload() {
-  img = loadImage('/showcase/sketches/escudo_unal_f.png');
+  img = loadImage('/showcase/sketches/unal_escudo_f.png');
 }
 
 function setup() {
   //Creacion del menu para seleccionar kernel
   sel = createSelect();
-  //sel.position(10, 10);
   sel.option('Identity');
   sel.option('Ridge detection');
   sel.option('Sharpen');
@@ -19,7 +18,6 @@ function setup() {
   sel.option('Convolution');
   sel.option('Unsharp masking');
   
-  //Creation of canvas and a new empty image 
   createCanvas(650, 550);
   pixelDensity(1);
   newimg = createImage(img.width, img.width);
