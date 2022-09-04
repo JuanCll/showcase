@@ -9,7 +9,7 @@ function preload() {
 }
 
 function setup() { 
-  createCanvas(525, 500);
+  createCanvas(525, 550);
   pixelDensity(1);  
 }
 
