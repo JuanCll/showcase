@@ -6,7 +6,7 @@ La convolución puede ser aplicada a dos funciones cualesquiera de tiempo o espa
 {{< /hint >}}
 
 
-{{< p5-iframe sketch="/showcase/sketches/kernel_images.js" width="875" height="575" >}}
+{{< p5-iframe sketch="/showcase/sketches/kernel_images.js" width="775" height="575" >}}
 
 
 ## Image Histogram
@@ -18,7 +18,7 @@ Estos histogramas tienen diferentes aplicaciones en edición  y procesamiento de
 -[Articulo de Wikipedia](https://en.wikipedia.org/wiki/Image_histogram)
 {{< /hint >}}
 
-
+Histograma de imágen
 
 ## Lightness
 {{< hint info >}}
