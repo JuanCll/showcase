@@ -6,7 +6,7 @@ La convolución puede ser aplicada a dos funciones cualesquiera de tiempo o espa
 {{< /hint >}}
 
 
-{{< p5-iframe sketch="/showcase/sketches/kernel_images.js" width="455" height="325" >}}
+{{< p5-iframe sketch="/showcase/sketches/kernel_images.js" width="675" height="475" >}}
 
 
 ## Image Histogram
