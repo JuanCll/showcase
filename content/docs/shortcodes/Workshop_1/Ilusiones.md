@@ -8,8 +8,9 @@ Primer taller
 <div style="text-align: justify"> your-text-here 
 Únicamente con lineas rectas se consigue generar aparentes curvas.
 Se denomina curvas de Bézier a un sistema que se desarrolló hacia los años 1960 para el trazado de dibujos técnicos, en el diseño aeronáutico y en el de automóviles. Su denominación es en honor a Pierre Bézier, quien ideó un método de descripción matemática de las curvas que se comenzó a utilizar con éxito en los programas de CAD.
-Las curvas de Bézier han sido ampliamente usadas en los gráficos generados por ordenador para modelado de curvas suaves.   -[Articulo de Wikipedia](https://es.wikipedia.org/wiki/Curva_de_Bézier)
+Las curvas de Bézier han sido ampliamente usadas en los gráficos generados por ordenador para modelado de curvas suaves.   
 </div>
+-[Articulo de Wikipedia](https://es.wikipedia.org/wiki/Curva_de_Bézier)
 {{< /hint  >}}
 
 {{< details title="p5-lines" open=false >}}
