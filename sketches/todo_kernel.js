@@ -18,36 +18,43 @@ function setup() {
   sel.option('Convolution');
   sel.option('Unsharp masking');
   
-  createCanvas(500, 310);
+  createCanvas(500, 410);
   pixelDensity(1);
-  newimg = createImage(img.width, img.width); 
+  newimg = createImage(img.width, img.width);
+  
 }
 
 function draw() {
+  
   background(225);
   image(img, 0, 0);
+  
   let sizem = 3;
+  
   newimg.loadPixels();
   img.loadPixels();
   /*xm = mouseX;
   ym = mouseY;
   */
-  if (sel.value() !== 'Identity') {   
+  if (sel.value() !== 'Identity') {
+    
     matrix = selection(sel.value());
     for (var x = 0; x < newimg.width; x++) {
       for (var y = 0; y < newimg.height; y++) {
         let c = convolution(img, x, y, matrix, sizem);
         var index =  (y * newimg.width + x) * 4;
+
         newimg.pixels[index] = c[0];
         newimg.pixels[index + 1] = c[1];
         newimg.pixels[index + 2] = c[2];
         newimg.pixels[index + 3] = 255;
       }
-    } 
+    }
     newimg.updatePixels();
     image(newimg, width/2, 0);
   } else {
-    image(img, width/2, 0); 
+    image(img, width/2, 0);
+    
   }
   var rango = 256
   image(newimg, 0, 0);
@@ -55,7 +62,9 @@ function draw() {
   for (i = 0; i <= rango; i++) {
     histogram[i] = 0
   }
+
   loadPixels();
+  
   for (var x1 = 0; x1 < newimg.width; x1+=5) {
     for (var y1 = 0; y1 < newimg.height; y1+=5) {
       var indice = (x1 + y1 * newimg.width) * 4;
@@ -70,9 +79,10 @@ function draw() {
   image(img, 0, 0);
   stroke(250,20,200)
   push()
-  translate(280,0)
+  translate(10,0)
   for (x1 = 0; x1 <= rango; x1++) {
     index2 = histogram[x1];
+
     y2=int(map(index2, 0, max(histogram), height, height-200));
 		y3 = height
     xPos = map(x1,0,rango,0, width-20)
@@ -139,4 +149,36 @@ function selection(value) {
       break;
   }
   return matrix
+}
+
+function brillo(masomenos){
+  newimg.loadPixels();
+  for (var x = 0; x < img.width; x++) {
+    for (var y = 0; y < img.height; y++) {
+      var index =  (y * img.width + x) * 4;
+      if(masomenos){
+        img.pixels[index] = constrain(img.pixels[index]*1.1,0,255);
+        img.pixels[index+1] = constrain(img.pixels[index+1]*1.1,0,255);
+        img.pixels[index+2] = constrain(img.pixels[index+2]*1.1,0,255);
+      }
+      else{
+        img.pixels[index] = constrain(img.pixels[index]/1.1,0,255);
+        img.pixels[index+1] = constrain(img.pixels[index+1]/1.1,0,255);
+        img.pixels[index+2] = constrain(img.pixels[index+2]/1.1,0,255);
+      }
+    }
+  }
+  img.updatePixels();
+  image(img, width/2, 0);
+}
+
+function keyPressed() {
+  switch (key) {
+    case "+":
+      brillo(true); 
+      break;
+    case "-":
+      brillo(false);
+      break;
+  }
 }
