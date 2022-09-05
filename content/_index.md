@@ -15,6 +15,3 @@ En esta página encontrara los reportes academicos correspondientes al grupo.
 3. Andrés Felipe López Gutiérrez 
 4. Santiago Sánchez Mora
 {{< /hint >}}
-
-### Remarks
-
