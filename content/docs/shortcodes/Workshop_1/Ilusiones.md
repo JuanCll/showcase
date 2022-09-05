@@ -42,8 +42,7 @@ Las curvas de Bézier han sido ampliamente usadas en los gráficos generados por
 {{</hint >}}
 
 {{< details title="p5-lines" open=false >}}
-{{< highlight html >}}
-{{</* p5-iframe sketch="/showcase/sketches/illusion_lines.js" width="525" height="525" */>}}
+{{< highlight js >}}
 
 function setup() {
   createCanvas(500, 500);
