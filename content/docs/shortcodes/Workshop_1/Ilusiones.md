@@ -83,7 +83,7 @@ Aunque no hay una respuesta definitiva, se cree que ocurre por un proceso de inh
 {{</hint>}}
 
 {{< details title="p5-grid" open=false >}}
-{{< highlight js >}}
+{{< highlight html >}}
 {{</* p5-iframe sketch="/showcase/sketches/illusion_Grid.js" width="445" height="445" */>}}
 
 function setup() {
