@@ -3,7 +3,6 @@ let newimg;
 let d;
 let sel;
 
-
 function preload() {
   img = loadImage('/showcase/sketches/perro_foto_dim.jpg');
 }
