@@ -3,7 +3,7 @@ title: Introduction
 type: docs
 ---
 
-# Computación Visual
+# **Computación Visual**
 
 En esta página encontrara los reportes academicos correspondientes al grupo.
 
