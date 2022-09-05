@@ -43,6 +43,7 @@ Las curvas de Bézier han sido ampliamente usadas en los gráficos generados por
 
 {{< details title="p5-lines" open=false >}}
 {{< highlight js >}}
+//{{</* p5-iframe sketch="/showcase/sketches/illusion_lines.js" width="525" height="525" */>}}
 
 function setup() {
   createCanvas(500, 500);
@@ -82,8 +83,9 @@ Aunque no hay una respuesta definitiva, se cree que ocurre por un proceso de inh
 {{</hint>}}
 
 {{< details title="p5-grid" open=false >}}
-{{< highlight html >}}
-{{</* p5-iframe sketch="/showcase/sketches/illusion_Grid.js" width="445" height="445" */>}}
+{{< highlight js >}}
+
+//{{</* p5-iframe sketch="/showcase/sketches/illusion_Grid.js" width="445" height="445" */>}}
 
 function setup() {
     createCanvas(420, 420);
@@ -116,8 +118,8 @@ La primera vez que se reporto esta ilusion fue en una pared de una cafetería, e
 {{</hint>}}
 
 {{< details title="p5-paralelas" open=false >}}
-{{< highlight html >}}
-{{</* p5-iframe sketch="/showcase/sketches/illusion_paralelas.js" width="420" height="425" */>}}
+{{< highlight js >}}
+//{{</* p5-iframe sketch="/showcase/sketches/illusion_paralelas.js" width="420" height="425" */>}}
 
 function setup() {
     createCanvas(400, 400);
@@ -161,8 +163,8 @@ La falta de información del objeto completo hace que las imagenes rotando tenga
 {{</hint>}}
 
 {{< details title="p5-square" open=false >}}
-{{< highlight html >}}
-{{</* p5-iframe sketch="/showcase/sketches/breathing_square.js" width="425" height="425" */>}}
+{{< highlight js >}}
+//{{</* p5-iframe sketch="/showcase/sketches/breathing_square.js" width="425" height="425" */>}}
 
 let angle = 0;
 function setup() {
@@ -204,8 +206,8 @@ Ademas se pueden relaconar a ilusiones en las que se encuentran gran cantidad de
 
 
 {{< details title="p5-squares" open=false >}}
-{{< highlight html >}}
-{{</* p5-iframe sketch="/showcase/sketches/squares_rotating.js" width="625" height="625" */>}}
+{{< highlight js >}}
+//{{</* p5-iframe sketch="/showcase/sketches/squares_rotating.js" width="625" height="625" */>}}
 
 function setup() {
   createCanvas(600, 600);
