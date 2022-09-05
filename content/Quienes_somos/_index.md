@@ -3,7 +3,7 @@ menu:
   after:
     name: Quienes somos
     weight: 5
-title: Quienes somos
+title: ¿Quiénes somos?
 
 bookCollapseSection: true
 ---
