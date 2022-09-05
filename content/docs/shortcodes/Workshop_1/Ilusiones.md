@@ -13,6 +13,29 @@ Las curvas de Bézier han sido ampliamente usadas en los gráficos generados por
 {{< details title="p5-lines" open=false >}}
 {{< highlight html >}}
 {{</* p5-iframe sketch="/showcase/sketches/illusion_lines.js" width="525" height="525" */>}}
+
+function setup() {
+  createCanvas(500, 500);
+}
+function draw() {
+  background(220);
+  for(var i1=0;i1<500;){
+    line(0, i1, 10+i1, 500);
+    i1+=10;
+  }
+  for(var i2=0;i2<500;){
+    line(500, 10+i2, i2, 0);
+    i2+=10;
+  }
+  for(var i3=0;i3<500;){
+    line(0, 500-i3, 10+i3, 0);
+    i3+=10;
+  }
+  for(var i4=0;i4<500;){
+    line(500-i4, 500, 500, i4);
+    i4+=10;
+  }	  
+}
 {{< /highlight >}}
 {{< /details >}}
 
@@ -29,8 +52,24 @@ Aunque no hay una respuesta definitiva, se cree que ocurre por un proceso de inh
 {{</hint>}}
 
 {{< details title="p5-grid" open=false >}}
-{{< highlight html >}}
+{{< highlight js >}}
 {{</* p5-iframe sketch="/showcase/sketches/illusion_Grid.js" width="445" height="445" */>}}
+
+function setup() {
+    createCanvas(420, 420);
+  }
+  function draw() {
+    background("white"); 
+    for(var i=0; i < 400;) {
+      for(var j=0; j<400; ){
+        rect(i, j, 20, 10);
+        rect(i, j+20, 20, 10);  
+        j+=30
+      }
+      fill("black");
+      i+=30
+    }
+  }
 {{< /highlight >}}
 {{< /details >}}
 
@@ -47,8 +86,29 @@ La primera vez que se reporto esta ilusion fue en una pared de una cafetería, e
 {{</hint>}}
 
 {{< details title="p5-paralelas" open=false >}}
-{{< highlight html >}}
+{{< highlight js >}}
 {{</* p5-iframe sketch="/showcase/sketches/illusion_paralelas.js" width="420" height="425" */>}}
+
+function setup() {
+    createCanvas(400, 400);
+  }
+  function draw() {
+    background("white");
+    for (var i = 0; i < 400; i+=20) {
+     line(0,20+i,400,20+i)
+    }
+    for (var j = 0; j < 50; j+=10) {
+      for (var k = 0; k < 400; k+=50) {
+        rect(0+(k+j/5), 20+j+j, 25, 20);
+        rect(0+(k+10-j/5), 120+j+j, 25, 20);
+        rect(0+(k+j/5), 220+j+j, 25, 20);
+        rect(0+(k+10-j/5), 320+j+j, 25, 20);
+        line(0,10,400,10)
+        stroke("gray")
+      fill("black")
+      }
+    }
+  }
 {{< /highlight >}}
 {{< /details >}}
 
@@ -71,8 +131,35 @@ La falta de información del objeto completo hace que las imagenes rotando tenga
 {{</hint>}}
 
 {{< details title="p5-square" open=false >}}
-{{< highlight html >}}
+{{< highlight js >}}
 {{</* p5-iframe sketch="/showcase/sketches/breathing_square.js" width="425" height="425" */>}}
+
+let angle = 0;
+function setup() {
+  createCanvas(400, 400);
+  angleMode(DEGREES);
+  // stroke('black');
+  noStroke();
+}
+function draw() {
+  background(252, 255, 216);
+  push();
+  translate(200, 200);
+  rotate(angle);
+  fill(17, 0, 255);
+  rectMode(CENTER);
+  rect(0, 0, 200, 200);
+  angle = angle + 3;
+  pop();
+  if (!mouseIsPressed) {
+    rectMode(CORNER);
+    fill(255, 153, 55);
+    rect(0, 0, 180, 180);
+    rect(220, 0, 180, 180);
+    rect(0, 220, 180, 180);
+    rect(220, 220, 180, 180);
+  }
+}
 {{< /highlight >}}
 {{< /details >}}
 
@@ -87,8 +174,40 @@ Ademas se pueden relaconar a ilusiones en las que se encuentran gran cantidad de
 
 
 {{< details title="p5-squares" open=false >}}
-{{< highlight html >}}
+{{< highlight js >}}
 {{</* p5-iframe sketch="/showcase/sketches/squares_rotating.js" width="625" height="625" */>}}
+
+function setup() {
+  createCanvas(600, 600);
+  // rectMode(CENTER);
+  x_0 = 0;
+  y_0 = 255;
+  a = true;
+}
+function draw() {
+  background(0);
+  push();
+  translate(width / 2, height / 2);
+  for (let x = 420; x >= 40; x = x / 1.08) {
+    noStroke();
+    rotate(radians(frameCount / 2));
+    fill(y_0, 40);
+    rect(0, 0, x, x);
+  }
+  pop();
+  point(300, 300);
+  stroke("blue"); 
+  strokeWeight(10); 
+}
+function mousePressed() {
+  if (a == false) {
+    noLoop();
+    a = true;
+  } else {
+    loop();
+    a = false;
+  }
+}
 {{< /highlight >}}
 {{< /details >}}
 
