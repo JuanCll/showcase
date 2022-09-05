@@ -1,11 +1,11 @@
-<!doctype html><html lang=en-us dir=ltr><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="Workshop #1: Masking # Introducción # Marco teórico # Image Kernels # En procesamiento de imágenes un kernel, matriz de convolución o mask es una matriz utilizada para realizar ciertos cambio en una imágen. Esto se consigue haciendo una convolucion entre la imagen y el kernel. Una convolución es un proceso matemático en el cual cada elemento de la imágen se suma con sus vecinos y se opera con la matriz."><meta name=theme-color content="#FFFFFF"><meta name=color-scheme content="light dark"><meta property="og:title" content><meta property="og:description" content="Workshop #1: Masking # Introducción # Marco teórico # Image Kernels # En procesamiento de imágenes un kernel, matriz de convolución o mask es una matriz utilizada para realizar ciertos cambio en una imágen. Esto se consigue haciendo una convolucion entre la imagen y el kernel. Una convolución es un proceso matemático en el cual cada elemento de la imágen se suma con sus vecinos y se opera con la matriz."><meta property="og:type" content="article"><meta property="og:url" content="https://visualcomputing.github.io/showcase/docs/shortcodes/Workshop_1/Masking/"><meta property="article:section" content="docs"><meta property="article:modified_time" content="2022-09-04T20:43:02-05:00"><title>Masking | Showcase Template</title><link rel=manifest href=/showcase/manifest.json><link rel=icon href=/showcase/favicon.png type=image/x-icon><link rel=stylesheet href=/showcase/book.min.ab46de3e725a6415339a37bba23a0067534a37289b063c9f8d011515a63097a8.css integrity="sha256-q0bePnJaZBUzmje7ojoAZ1NKNyibBjyfjQEVFaYwl6g=" crossorigin=anonymous><script defer src=/showcase/flexsearch.min.js></script>
-<script defer src=/showcase/en.search.min.cff5344034c0b41f15c9e7f073d2afa077986f966814a93aa8d0375ea16ba52a.js integrity="sha256-z/U0QDTAtB8Vyefwc9KvoHeYb5ZoFKk6qNA3XqFrpSo=" crossorigin=anonymous></script></head><body dir=ltr><input type=checkbox class="hidden toggle" id=menu-control>
+<!doctype html><html lang=en-us dir=ltr><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="Workshop #1: Masking # Introducción # El visual masking o enmascaramiento se puede entender como un paradigma, herramienta o fenómeno de percepción visual, el cual es utilizado para la cambiar la apariencia de una imagen mediante una máscara. Para el siguiente informe, teniendo como objetivo el entendiemiento y profundización de este concepto como una base de la computación visual, se experimentó con los distintos componentes dados y se propusieron algoritmos que los implementen de forma eficiente."><meta name=theme-color content="#FFFFFF"><meta name=color-scheme content="light dark"><meta property="og:title" content><meta property="og:description" content="Workshop #1: Masking # Introducción # El visual masking o enmascaramiento se puede entender como un paradigma, herramienta o fenómeno de percepción visual, el cual es utilizado para la cambiar la apariencia de una imagen mediante una máscara. Para el siguiente informe, teniendo como objetivo el entendiemiento y profundización de este concepto como una base de la computación visual, se experimentó con los distintos componentes dados y se propusieron algoritmos que los implementen de forma eficiente."><meta property="og:type" content="article"><meta property="og:url" content="https://visualcomputing.github.io/showcase/docs/shortcodes/Workshop_1/Masking/"><meta property="article:section" content="docs"><meta property="article:modified_time" content="2022-09-04T21:24:17-05:00"><title>Masking | Showcase Template</title><link rel=manifest href=/showcase/manifest.json><link rel=icon href=/showcase/favicon.png type=image/x-icon><link rel=stylesheet href=/showcase/book.min.ab46de3e725a6415339a37bba23a0067534a37289b063c9f8d011515a63097a8.css integrity="sha256-q0bePnJaZBUzmje7ojoAZ1NKNyibBjyfjQEVFaYwl6g=" crossorigin=anonymous><script defer src=/showcase/flexsearch.min.js></script>
+<script defer src=/showcase/en.search.min.69e209b94092d564286e25c47c429775d20fb85144812441baaf6874a0932e3f.js integrity="sha256-aeIJuUCS1WQobiXEfEKXddIPuFFEgSRBuq9odKCTLj8=" crossorigin=anonymous></script></head><body dir=ltr><input type=checkbox class="hidden toggle" id=menu-control>
 <input type=checkbox class="hidden toggle" id=toc-control><main class="container flex"><aside class=book-menu><div class=book-menu-content><nav><h2 class=book-brand><a class="flex align-center" href=/showcase/><span>Showcase Template</span></a></h2><div class=book-search><input type=text id=book-search-input placeholder=Search aria-label=Search maxlength=64 data-hotkeys=s/><div class="book-search-spinner hidden"></div><ul id=book-search-results></ul></div><ul><li class=book-section-flat><span>Shortcodes</span><ul><li><input type=checkbox id=section-40370cffa0e58f63b3d83ad764ed10f8 class=toggle checked>
 <label for=section-40370cffa0e58f63b3d83ad764ed10f8 class="flex justify-between"><a role=button>Workshop 1</a></label><ul><li><a href=/showcase/docs/shortcodes/Workshop_1/Ilusiones/>Ilusiones</a></li><li><a href=/showcase/docs/shortcodes/Workshop_1/Masking/ class=active>Masking</a></li></ul></li></ul></li></ul><ul><li><a href=/showcase/Quienes_somos/>Quienes somos</a></li></ul></nav><script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script></div></aside><div class=book-page><header class=book-header><div class="flex align-center justify-between"><label for=menu-control><img src=/showcase/svg/menu.svg class=book-icon alt=Menu></label>
 <strong>Masking</strong>
-<label for=toc-control><img src=/showcase/svg/toc.svg class=book-icon alt="Table of Contents"></label></div><aside class="hidden clearfix"><nav id=TableOfContents><ul><li><a href=#workshop-1-masking><strong>Workshop #1: Masking</strong></a><ul><li><a href=#introducción><strong>Introducción</strong></a></li><li><a href=#marco-teórico><strong>Marco teórico</strong></a><ul><li><a href=#image-kernels>Image Kernels</a></li><li><a href=#lightness>Lightness</a></li><li><a href=#image-histogram>Image Histogram</a></li></ul></li><li><a href=#método><strong>Método</strong></a></li><li><a href=#resultados><strong>Resultados</strong></a><ul><li><a href=#aplicación-con-todos-los-casos-anteriores-juntos>Aplicación con todos los casos anteriores juntos</a></li></ul></li><li><a href=#discusión><strong>Discusión</strong></a></li><li><a href=#conclusiones><strong>Conclusiones</strong></a></li></ul></li></ul></nav></aside></header><article class=markdown><h1 id=workshop-1-masking><strong>Workshop #1: Masking</strong>
+<label for=toc-control><img src=/showcase/svg/toc.svg class=book-icon alt="Table of Contents"></label></div><aside class="hidden clearfix"><nav id=TableOfContents><ul><li><a href=#workshop-1-masking><strong>Workshop #1: Masking</strong></a><ul><li><a href=#introducción><strong>Introducción</strong></a></li><li><a href=#marco-teórico><strong>Marco teórico</strong></a><ul><li><a href=#image-kernels>Image Kernels</a></li><li><a href=#lightness>Lightness</a></li><li><a href=#image-histogram>Image Histogram</a></li></ul></li><li><a href=#método><strong>Método</strong></a><ul><li><a href=#image-kernels-1>Image Kernels</a></li><li><a href=#lightness-and-image-histogram>Lightness and Image Histogram</a></li></ul></li><li><a href=#resultados><strong>Resultados</strong></a><ul><li><a href=#aplicación-con-todos-los-casos-anteriores-juntos>Aplicación con todos los casos anteriores juntos</a></li></ul></li><li><a href=#discusión><strong>Discusión</strong></a></li><li><a href=#conclusiones><strong>Conclusiones</strong></a></li></ul></li></ul></nav></aside></header><article class=markdown><h1 id=workshop-1-masking><strong>Workshop #1: Masking</strong>
 <a class=anchor href=#workshop-1-masking>#</a></h1><h2 id=introducción><strong>Introducción</strong>
-<a class=anchor href=#introducci%c3%b3n>#</a></h2><h2 id=marco-teórico><strong>Marco teórico</strong>
+<a class=anchor href=#introducci%c3%b3n>#</a></h2><p>El <em>visual masking</em> o enmascaramiento se puede entender como un paradigma, herramienta o fenómeno de percepción visual, el cual es utilizado para la cambiar la apariencia de una imagen mediante una máscara. Para el siguiente informe, teniendo como objetivo el entendiemiento y profundización de este concepto como una base de la computación visual, se experimentó con los distintos componentes dados y se propusieron algoritmos que los implementen de forma eficiente.</p><h2 id=marco-teórico><strong>Marco teórico</strong>
 <a class=anchor href=#marco-te%c3%b3rico>#</a></h2><h3 id=image-kernels>Image Kernels
 <a class=anchor href=#image-kernels>#</a></h3><blockquote class="book-hint info">En procesamiento de imágenes un kernel, matriz de convolución o mask es una matriz utilizada para realizar ciertos cambio en una imágen. Esto se consigue haciendo una convolucion entre la imagen y el kernel.
 Una convolución es un proceso matemático en el cual cada elemento de la imágen se suma con sus vecinos y se opera con la matriz. -<a href=https://en.wikipedia.org/wiki/Kernel_%28image_processing%29#Convolution>Articulo de Wikipedia</a>
@@ -66,7 +66,223 @@ Estos histogramas tienen diferentes aplicaciones en edición y procesamiento de 
           </body>
         </html>
       "></iframe><h2 id=método><strong>Método</strong>
-<a class=anchor href=#m%c3%a9todo>#</a></h2><h2 id=resultados><strong>Resultados</strong>
+<a class=anchor href=#m%c3%a9todo>#</a></h2><h3 id=image-kernels-1>Image Kernels
+<a class=anchor href=#image-kernels-1>#</a></h3><p>Para el desarrollo de esta parte del taller, se usaron 5 funciones:</p><ul><li><p>Para cargar la imagen seleccionada a procesar:
+<details><summary>preload()</summary><div class=markdown-inner><pre><code>function preload() {
+    img = loadImage('Images/images11.jpg');
+}
+</code></pre></div></details></p></li><li><p>Para inicializar el canvas y los elementos del programa
+<details><summary>setup()</summary><div class=markdown-inner><pre><code>function setup() {
+
+    //Creation of the selection dropdown, to choose the kernel
+    sel = createSelect();
+    //sel.position(10, 10);
+    sel.option('Identity');
+    sel.option('Ridge detection');
+    sel.option('Sharpen');
+    sel.option('Blur');
+    sel.option('Convolution');
+    sel.option('Unsharp masking');
+    
+    //Creation of canvas and a new empty image 
+    createCanvas(400, 200);
+    pixelDensity(1);
+    newimg = createImage(img.width, img.width);
+
+}
+</code></pre></div></details></p></li><li><p>Para crear y recorrer la imagen:
+<details><summary>draw()</summary><div class=markdown-inner><pre><code>function draw() {
+    //Gray empty canvas
+    background(225);
+    image(img, 0, 0);
+    
+    //Load original and new empy image
+    newimg.loadPixels();
+    img.loadPixels();
+    
+    if (sel.value() !== 'Identity') {
+        //Establish the values of the wanted matrix
+        matrix = selection(sel.value())[0];
+        
+        //Establish the size of the kernel
+        let sizem = selection(sel.value())[1];
+        
+        //Loop through the image matrix
+        for (var x = 0; x &lt; newimg.width; x++) {
+            for (var y = 0; y &lt; newimg.height; y++) {
+                
+                //Get the colors resulting from the convolution
+                let c = convolution(img, x, y, matrix, sizem);
+                
+                //Get the index from the matrix with pixelDensity = 1
+                var index =  (y * newimg.width + x) * 4;
+                
+                //Set the new colors to the corresponding pixels
+                newimg.pixels[index] = c[0];
+                newimg.pixels[index + 1] = c[1];
+                newimg.pixels[index + 2] = c[2];
+                newimg.pixels[index + 3] = 255;
+
+            }
+        }
+        //Update de image
+        newimg.updatePixels();
+        
+        //Create a new image in the right half of the canvas
+        image(newimg, width/2, 0);
+        
+    } else { //If the option is identity there's no need to loop the image
+        image(img, width/2, 0);
+    }
+    
+}
+</code></pre></div></details></p></li><li><p>Para realizar la convolución:
+<details><summary>convolution(img, x, y, matrix, sizem)</summary><div class=markdown-inner><pre><code>function convolution(img, x, y, matrix, sizem) {
+    //Funcion that multiplies the current values with the kernel chosen
+    
+    //Declare de variables
+    let r = 0.0;
+    let g = 0.0;
+    let b = 0.0;
+    
+    //Loop through the kernel
+    for (var i = -1; i &lt; sizem - 1; i++) {
+        for (var j = -1; j &lt; sizem - 1; j++) {
+
+            let px = x + i;
+            let py = y + j;
+            
+            //Calculate the index
+            let index = (px + img.width * py)*4;
+            
+            //Make sure the index stays inside the range
+            index = constrain(index, 0, img.pixels.length - 1);
+            
+            //Multiply the corresponding pixels with the kernel
+            r += img.pixels[index] * matrix[i+1][j+1];
+            g += img.pixels[index + 1] * matrix[i+1][j+1];
+            b += img.pixels[index + 2] * matrix[i+1][j+1];
+        
+        }
+    }
+    return [r,g,b];
+}
+</code></pre></div></details></p></li><li><p>Para seleccionar un kernel:
+<details><summary>selection(value)</summary><div class=markdown-inner><pre><code>function selection(value) {
+    //Function that returns the chosen kernel and its size
+    
+    switch (value) {
+        case 'Ridge detection':
+            matrix = [ [ -1, -1, -1 ],
+                        [ -1,  8, -1 ],
+                        [ -1, -1, -1 ] ]; 
+            sizem = 3;
+            break;
+        case 'Sharpen':
+            matrix = [  [ 0, -1, 0 ],
+                        [ -1,  5, -1 ],
+                        [ 0, -1, 0 ] ];
+            sizem = 3;
+            break;
+        case 'Blur':
+            matrix = [  [ 1/9, 1/9, 1/9 ],
+                        [ 1/9,  1/9, 1/9 ],
+                        [ 1/9, 1/9, 1/9 ] ]; 
+            sizem = 3;
+            break;
+        case 'Convolution':
+            matrix = [  [ -1, -1, -1 ],
+                        [ -1,  9, -1 ],
+                        [ -1, -1, -1 ] ];
+            sizem = 3;
+            break;
+        case 'Unsharp masking':
+            matrix = [  [ -1/256, -4/256, -6/256, -4/256, -1/256 ],
+                        [ -4/256, -16/256, -24/256, -16/256, -4/256 ],
+                        [ -6/256, -24/256, 476/256, -24/256, -6/256], 
+                        [ -4/256, -16/256, -24/256, -16/256, -4/256 ],
+                        [ -1/256, -4/256, -6/256, -4/256, -1/256 ]]; 
+            sizem = 5;
+            break;
+        default:
+            matrix = [  [ -1, -1, -1 ],
+                        [ -1,  9, -1 ],
+                        [ -1, -1, -1 ] ];
+            sizem = 3;
+            break;
+    }
+    return [matrix, sizem]
+}
+</code></pre></div></details></p></li></ul><h3 id=lightness-and-image-histogram>Lightness and Image Histogram
+<a class=anchor href=#lightness-and-image-histogram>#</a></h3><p>A partir del desarrollo de la <a href=#image-kernels-1>sección anterior</a>, se pudo lograr el segundo y tercer ítem. Se cambiaron y agregaron los siguientes componentes:</p><ul><li><p>Para crear y establecer el histograma de la imagen:
+<details><summary>draw()</summary><div class=markdown-inner><pre><code>function draw() { 
+    var rango = 256;
+    image(img, 0, 0);
+    var histogram = new Array(rango);
+    for (i = 0; i &lt;= rango; i++) {
+        histogram[i] = 0;
+    }
+
+    loadPixels();
+    
+    for (var x = 0; x &lt; img.width; x+=5) {
+        for (var y = 0; y &lt; img.height; y+=5) {
+            var indice = (x + y * img.width) * 4;
+            var a = pixels[indice];
+            var a2 = pixels[indice + 1];
+            var a3 = pixels[indice + 2];
+            var a4 = pixels[indice + 3];
+            b = int(a3);
+            histogram[b]++;
+        }
+    }
+    image(img, 0, 0);
+    stroke(250,20,200);
+    push();
+    translate(10,0)
+    for (x = 0; x &lt;= rango; x++) {
+        index = histogram[x];
+
+        y1=int(map(index, 0, max(histogram), height, height-200));
+        y2 = height;
+        xPos = map(x,0,rango,0, width-20);
+        line(xPos, y1, xPos, y2);
+    }
+    pop();
+}
+</code></pre></div></details></p></li><li><p>Para cambiar el brillo de la imagen:
+<details><summary>brillo(masomenos)</summary><div class=markdown-inner><pre><code>function brillo(masomenos){
+    img.loadPixels();
+    for (var x = 0; x &lt; img.width; x++) {
+        for (var y = 0; y &lt; img.height; y++) {
+            var index =  (y * img.width + x) * 4;
+            if(masomenos){
+                img.pixels[index] = constrain(img.pixels[index]*1.1,0,255);
+                img.pixels[index+1] = constrain(img.pixels[index+1]*1.1,0,255);
+                img.pixels[index+2] = constrain(img.pixels[index+2]*1.1,0,255);
+            }
+            else{
+                img.pixels[index] = constrain(img.pixels[index]/1.1,0,255);
+                img.pixels[index+1] = constrain(img.pixels[index+1]/1.1,0,255);
+                img.pixels[index+2] = constrain(img.pixels[index+2]/1.1,0,255);
+            }
+        }
+    }
+    img.updatePixels();
+    image(img, width/2, 0);
+}
+</code></pre></div></details></p></li><li><p>Configurar el las teclas <em>+</em> y <em>-</em> para ajustar el brillo:
+<details><summary>keyPressed()</summary><div class=markdown-inner><pre><code>function keyPressed() {
+    switch (key) {
+        case &quot;+&quot;:
+            brillo(true); 
+            break;
+        case &quot;-&quot;:
+            brillo(false);
+            break;
+    }
+}
+</code></pre></div></details></p></li></ul><h2 id=resultados><strong>Resultados</strong>
 <a class=anchor href=#resultados>#</a></h2><h3 id=aplicación-con-todos-los-casos-anteriores-juntos>Aplicación con todos los casos anteriores juntos
 <a class=anchor href=#aplicaci%c3%b3n-con-todos-los-casos-anteriores-juntos>#</a></h3><details><summary>p5-kernel image processing</summary><div class=markdown-inner><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-js data-lang=js><span style=display:flex><span><span style=color:#66d9ef>let</span> <span style=color:#a6e22e>img</span>;
 </span></span><span style=display:flex><span><span style=color:#66d9ef>let</span> <span style=color:#a6e22e>newimg</span>;
@@ -248,5 +464,5 @@ Estos histogramas tienen diferentes aplicaciones en edición y procesamiento de 
         </html>
       "></iframe><h2 id=discusión><strong>Discusión</strong>
 <a class=anchor href=#discusi%c3%b3n>#</a></h2><h2 id=conclusiones><strong>Conclusiones</strong>
-<a class=anchor href=#conclusiones>#</a></h2></article><footer class=book-footer><div class="flex flex-wrap justify-between"><div><a class="flex align-center" href=https://github.com/visualcomputing/showcase/commit/79a0e7eda59e29f9af8911dbbeeb75480f96fa1a title='Last modified by Juan Felipe Callejas F | September 5, 2022' target=_blank rel=noopener><img src=/showcase/svg/calendar.svg class=book-icon alt=Calendar>
-<span>September 5, 2022</span></a></div></div><script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script></footer><div class=book-comments></div><label for=menu-control class="hidden book-menu-overlay"></label></div><aside class=book-toc><div class=book-toc-content><nav id=TableOfContents><ul><li><a href=#workshop-1-masking><strong>Workshop #1: Masking</strong></a><ul><li><a href=#introducción><strong>Introducción</strong></a></li><li><a href=#marco-teórico><strong>Marco teórico</strong></a><ul><li><a href=#image-kernels>Image Kernels</a></li><li><a href=#lightness>Lightness</a></li><li><a href=#image-histogram>Image Histogram</a></li></ul></li><li><a href=#método><strong>Método</strong></a></li><li><a href=#resultados><strong>Resultados</strong></a><ul><li><a href=#aplicación-con-todos-los-casos-anteriores-juntos>Aplicación con todos los casos anteriores juntos</a></li></ul></li><li><a href=#discusión><strong>Discusión</strong></a></li><li><a href=#conclusiones><strong>Conclusiones</strong></a></li></ul></li></ul></nav></div></aside></main></body></html>
+<a class=anchor href=#conclusiones>#</a></h2></article><footer class=book-footer><div class="flex flex-wrap justify-between"><div><a class="flex align-center" href=https://github.com/visualcomputing/showcase/commit/d2a1fbee7aaf66babc4463512cff060b39f75570 title='Last modified by jlizarazoa | September 5, 2022' target=_blank rel=noopener><img src=/showcase/svg/calendar.svg class=book-icon alt=Calendar>
+<span>September 5, 2022</span></a></div></div><script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script></footer><div class=book-comments></div><label for=menu-control class="hidden book-menu-overlay"></label></div><aside class=book-toc><div class=book-toc-content><nav id=TableOfContents><ul><li><a href=#workshop-1-masking><strong>Workshop #1: Masking</strong></a><ul><li><a href=#introducción><strong>Introducción</strong></a></li><li><a href=#marco-teórico><strong>Marco teórico</strong></a><ul><li><a href=#image-kernels>Image Kernels</a></li><li><a href=#lightness>Lightness</a></li><li><a href=#image-histogram>Image Histogram</a></li></ul></li><li><a href=#método><strong>Método</strong></a><ul><li><a href=#image-kernels-1>Image Kernels</a></li><li><a href=#lightness-and-image-histogram>Lightness and Image Histogram</a></li></ul></li><li><a href=#resultados><strong>Resultados</strong></a><ul><li><a href=#aplicación-con-todos-los-casos-anteriores-juntos>Aplicación con todos los casos anteriores juntos</a></li></ul></li><li><a href=#discusión><strong>Discusión</strong></a></li><li><a href=#conclusiones><strong>Conclusiones</strong></a></li></ul></li></ul></nav></div></aside></main></body></html>
