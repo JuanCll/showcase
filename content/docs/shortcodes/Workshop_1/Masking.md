@@ -1,17 +1,16 @@
 # **Workshop #1: Masking**
 
 ## **Introducción**
-El _visual masking_ o enmascaramiento se puede entender como un paradigma, herramienta o fenómeno de percepción visual, el cual es utilizado para la cambiar la apariencia de una imagen mediante una máscara. Para el siguiente informe, teniendo como objetivo el entendiemiento y profundización de este concepto como una base de la computación visual, se experimentó con los distintos componentes dados y se propusieron algoritmos que los implementen de forma eficiente.
+El _visual masking_ o enmascaramiento se puede entender como un paradigma, herramienta o fenómeno de percepción visual, el cual es utilizado para la cambiar la apariencia de una imagen mediante una máscara. Para el siguiente informe, teniendo como objetivo el entendimiento y profundización de este concepto como una base de la computación visual, se experimentó con los distintos componentes dados y se propusieron algoritmos que los implementen de forma eficiente.
 
 
 ## **Marco teórico**
 ### Image Kernels
 {{< hint info >}}
-En procesamiento de imágenes un kernel, matriz de convolución o mask es una matriz utilizada para realizar ciertos cambio en una imágen. Esto se consigue haciendo una convolucion entre la imagen y el kernel.
-Una convolución es un proceso matemático en el cual cada elemento de la imágen se suma con sus vecinos y se opera con la matriz.  -[Articulo de Wikipedia](https://en.wikipedia.org/wiki/Kernel_%28image_processing%29#Convolution)
-La convolución puede ser aplicada a dos funciones cualesquiera de tiempo o espacio (u otras variables) para arrojar una tercera función, la salida de la convolución. -[Energy Glossary](https://glossary.slb.com/es/terms/c/convolution#:~:text=Una%20operación%20matemática%20con%20dos,la%20salida%20de%20la%20convolución.)
+En procesamiento de imágenes un kernel, matriz de convolución o _mask_ es una matriz utilizada para realizar ciertos cambio en una imagen. Esto, se consigue haciendo una convolución entre la imagen y el kernel.\
+Una convolución es un proceso matemático, en el cual cada elemento de la imagen se suma con sus vecinos y se opera con la matriz.  -[Articulo de Wikipedia](https://en.wikipedia.org/wiki/Kernel_%28image_processing%29#Convolution)\
+La convolución puede ser aplicada a dos funciones cualesquiera de tiempo o espacio (u otras variables) para arrojar una tercera función: la salida de la convolución. -[Energy Glossary](https://glossary.slb.com/es/terms/c/convolution#:~:text=Una%20operación%20matemática%20con%20dos,la%20salida%20de%20la%20convolución.)\
 {{< /hint >}}
-
 
 {{< p5-iframe sketch="/showcase/sketches/kernel_images.js" width="530" height="355" >}}
 
@@ -19,7 +18,7 @@ La convolución puede ser aplicada a dos funciones cualesquiera de tiempo o espa
 ### Lightness
 {{< hint info >}}
 La luminosidad, también llamada claridad, es una propiedad de los colores. Ella da una indicación sobre el aspecto luminoso del color estudiado: cuanto más oscuro es el color, la luminosidad es más débil.
-Sin embargo la se le puede dar más de una definición, una de las más simples por ejemplo el promedio aritmético entre sus tres componentes en el modelo RGB.
+Sin embargo, se le puede dar más de una definición, una de las más simples, por ejemplo, es el promedio aritmético entre sus tres componentes en el modelo RGB.
 -[Articulo de Wikipedia](https://en.wikipedia.org/wiki/HSL_and_HSV#Lightness)
 {{< /hint >}}
 
@@ -31,10 +30,10 @@ Para aumentar el brillo utilice la tecla "+", para disminuirlo utilice la tecla 
 
 ### Image Histogram
 {{< hint info >}}
-Un histograma de imágen es un tipo de histograma que actua como una representación gráfica de la distribución tonal de una imágen digital.
+Un histograma de imagen es un tipo de histograma que actúa como una representación gráfica de la distribución tonal de una imagen digital.
 El eje horizontal representa las variaciones tonales, mientras que el eje vertical representa el número total de pixeles en un tono en particular.
-En la parte izquierda del eje horizontal se encuentran las áreas mas oscuras y en la parte derecha las más luminosas.
-Estos histogramas tienen diferentes aplicaciones en edición  y procesamiento de imágenes.
+En la parte izquierda del eje horizontal se encuentran las áreas más oscuras y en la parte derecha las más luminosas.
+Estos histogramas tienen diferentes aplicaciones en edición y procesamiento de imágenes.
 -[Articulo de Wikipedia](https://en.wikipedia.org/wiki/Image_histogram)
 {{< /hint >}}
 
@@ -120,7 +119,13 @@ Para el desarrollo de esta parte del taller, se usaron 5 funciones:
         
     }
 {{< /details >}}
+{{< hint info >}}
+Vale la pena resaltar la fórmula para hallar el índice del pixel que se está evaluando:
 
+`index = (x + img.width * y)*4`
+
+Esto, debido a que la matriz es la ventana de visualización x4, lo que implica que los primeros 4 índices, corresponderán a los valores R, G, B, A del píxel (0,0) (Esto asumiendo que la densidad del pixel será de 1), avanzando por pixel de 4 en 4.
+{{< /hint >}}
 - Para realizar la convolución:
 {{< details title="convolution(img, x, y, matrix, sizem)" open=false >}}
     function convolution(img, x, y, matrix, sizem) {
