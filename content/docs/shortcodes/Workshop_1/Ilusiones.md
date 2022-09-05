@@ -117,7 +117,7 @@ La primera vez que se reporto esta ilusion fue en una pared de una cafetería, e
 {{</hint>}}
 
 {{< details title="p5-paralelas" open=false >}}
-{{< highlight js >}}
+{{< highlight html >}}
 {{</* p5-iframe sketch="/showcase/sketches/illusion_paralelas.js" width="420" height="425" */>}}
 
 function setup() {
@@ -162,7 +162,7 @@ La falta de información del objeto completo hace que las imagenes rotando tenga
 {{</hint>}}
 
 {{< details title="p5-square" open=false >}}
-{{< highlight js >}}
+{{< highlight html >}}
 {{</* p5-iframe sketch="/showcase/sketches/breathing_square.js" width="425" height="425" */>}}
 
 let angle = 0;
@@ -205,7 +205,7 @@ Ademas se pueden relaconar a ilusiones en las que se encuentran gran cantidad de
 
 
 {{< details title="p5-squares" open=false >}}
-{{< highlight js >}}
+{{< highlight html >}}
 {{</* p5-iframe sketch="/showcase/sketches/squares_rotating.js" width="625" height="625" */>}}
 
 function setup() {
