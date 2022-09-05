@@ -462,6 +462,6 @@ function keyPressed() {
 
 
 ## **Discusión**
-Se discutió principalmente del uso del _visual masking_ hoy en día, como una herramienta en la edición de fotografías y videos de formato digital y todo en base a cálculos matemáticos, visto en [Image Kernels](#image-kernels), y del uso que también se le puede dar para el análisis de la composición de las imágenes al aplicar una marcara y usar en conjunto oras herramientas como el [Image Histogram] (#image-histogram).
+Se discutió principalmente del uso del _visual masking_ hoy en día, como una herramienta en la edición de fotografías y videos de formato digital y todo en base a cálculos matemáticos, visto en [Image Kernels](#image-kernels), y del uso que también se le puede dar para el análisis de la composición de las imágenes al aplicar una marcara y usar en conjunto oras herramientas como el [Image Histogram](#image-histogram).
 
 ## **Conclusiones**
