@@ -1,7 +1,6 @@
 function setup() {
     createCanvas(400, 400);
   }
-  
   function draw() {
     background("white");
     for (var i = 0; i < 400; i+=20) {
@@ -16,5 +15,6 @@ function setup() {
         line(0,10,400,10)
         stroke("gray")
       fill("black")
-  }}
+      }
+    }
   }
