@@ -29,6 +29,48 @@ Adicionalmente, se ha hecho una clasificación de las ilusiones visuales de esta
 
 ## **Método**
 
+Como se explicó en el marco teórico, las ilusiones mostradas en este taller son ilusiones **visuales**, donde se perciben dichas ilusiones gracias al *engaño a los sentidos*. Asimismo, tenemos que la construcción de dichas ilusiones cognitivas (para este caso) dependen de dos factores:
+
+- No hay movimiento inducido
+- Hay movimiento inducido
+
+En el caso de **no hay movimiento inducido**, se utilizan en todo momento dos funciones:
+- Para crear el entorno la función `setup()`.
+```javascript
+function setup() {
+    // Creación del canvas 
+    createCanvas(width, height)
+}
+```
+- Para la creación de los obtejos dentro del entorno *canvas* la función `draw()`.
+```javascript
+function draw() {
+    // El píncel, aquí se dibujan líneas, establecen colores y se define la posición de los componentes 
+    ...
+    ...
+}
+```
+
+En este caso, únicamente se ubican *componentes estáticos* dentro del *canvas*. La ilusión es cognitiva pero todo el movimiento o dinamismo es generado por el "engaño " al cerebro inducido por el conjunto de componentes incluidos en la ilusión. 
+
+En el caso de **hay movimiento inducido**, se utilizan las mismas funciones y una más que sirve para interactuar con el usuario directamente.
+- La función `mousePressed()` se utiliza para definir en qué momentos el usuario puede hacer click en la pantalla y visualizará un cambio dinámico no generado por el cerebro, sino que será un cambio necesario para que se pueda notar el efecto de la ilusión.
+En el caso de la ilusión de los cuadrados rotando, se parte de utilizar la función `draw()` y una variable `x` dentro de un bucle `for(){}` para inducir movimiento a los cuadrados y hacerlos rotar en empezar a crecer a medida que avance el tiempo. Sin embargo, una variable `a = true` nos indica que el movimiento está activado, y es la función `mousePressed()` la encargada de llevarla a valor `a = false` y así ejecutar el siguiente código:
+
+```javascript
+function mousePressed() {
+  if (a == false) {
+    noLoop();
+    a = true;
+  } else {
+    loop();
+    a = false;
+  }
+}
+```
+Son entonces las funciones `noLoop()` y `loop()` las encargadas de <span style="color: red;">*parar*</span> y <span style="color: green;">*reanudar*</span> respectivamente,  el movimiento inducido en la ilusión. Y es al <span style="color: red;">*parar*</span> la ilusión cuando se percibe el efecto de la ilusión.
+
+**NOTA:** La *ilusión cuadrados rotando* fue diseñada de forma accidental al realizar pruebas de construcción de componentes en el editor de p5. Más adelante se discuten las posibles causas de dicha ilusión. 
 
 ## **Resultados**
 
