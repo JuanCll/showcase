@@ -42,8 +42,7 @@ for(var i = -2.5; i < 2.5; i++){
           }
         }
 ```
-{{< p5-iframe sketch="/showcase/sketches/Columnas.png" width="550" height="455" >}}
-
+![Imagen de las columnas](content\sketches\Columnas.png)
 ## **Resultados**
 
 ### Aplicación completa.
