@@ -20,7 +20,7 @@ Para el desarrollo de este taller se uso principalmete la biblioteca [P5.js](htt
 
 
 
-### **Creación de ambiente **
+### **Creación de ambiente**
 
 Para facilitar la creación de niveles y amntener la esteica de un BACKROOM tradicional, la creacion de varias estructuras es a traves de [ciclos FOR](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Statements/for), principalmente en las columnas y el techo.
 
@@ -42,7 +42,7 @@ for(var i = -2.5; i < 2.5; i++){
           }
         }
 ```
-{{< p5-iframe sketch="/showcase/sketches/Columnas.png" width="1652" height="455" >}}
+{{< p5-iframe sketch="/showcase/sketches/Columnas.png" width="550" height="455" >}}
 
 ## **Resultados**
 
