@@ -215,7 +215,7 @@ var $ = function(prop){
           keys[keyCode] = false;
       }
       function mouseClicked(){
-          //got this stuff from Willard's Minecraft
+          
           if (canvas.requestPointerLock) {
               canvas.requestPointerLock();
           }
