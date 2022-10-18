@@ -42,7 +42,7 @@ for(var i = -2.5; i < 2.5; i++){
           }
         }
 ```
-![Imagen de las columnas](content\sketches\Columnas.png)
+![Imagen de las columnas](/content/sketches/Columnas.png)
 ## **Resultados**
 
 ### Aplicación completa.
