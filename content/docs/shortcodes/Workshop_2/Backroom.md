@@ -28,7 +28,7 @@ Para el desarrollo de este taller se uso principalmete la biblioteca [P5.js](htt
 
 ### **Creación de ambiente**
 
-Para facilitar la creación de niveles y amntener la esteica de un BACKROOM tradicional, la creacion de varias estructuras es a traves de [ciclos FOR](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Statements/for), principalmente en las columnas y el techo.
+Para facilitar la creación de niveles y amntener la esteica de un BACKROOM tradicional, la creacion de varias estructuras es a traves de ciclos FOR, principalmente en las columnas y el techo.
 
 ### Columnas
 Las columnas son una estructura para limitar las paredes y a nosotros los desarrolladores nos ayuda a ubicar puntos estrategicos en el nivel para su creación, y ayudar a crear un efecto que confunda al jugador haciendo que las habitasciones sean similares.
@@ -48,7 +48,26 @@ for(var i = -2.5; i < 2.5; i++){
           }
         }
 ```
-![Imagen de las columnas](/content/sketches/Columnas.png)
+![Imagen columnas](https://imgur.com/a/0urxtRi)
+
+### Paredes
+Las paredes crean los pasillos y habitaciones del juego, se crean con la funcion `pared()` que definimos, crea un plano con la función `plane()` de P5 y le agregamos las coordenas y modifiacion en los planos X, Y y Z.
+
+```javascript
+function pared(x,y,z,dx,dy,dz,l){
+        push();
+        translate(x,y,z);
+        rotateX(ang(dx));
+        rotateY(ang(dy));
+        rotateZ(ang(dz));
+        fill(180,153,81);
+        plane(l,110);
+        pop();
+```
+Donnde x, y & z son las coordenadas del punto de origen de la pared, dx, dy y dz son los angulos de inclinacion del plano y l es la longitud.
+
+![Imagen paredes](https://imgur.com/Q5VXvHQ)
+
 ## **Resultados**
 
 ### Aplicación completa.
