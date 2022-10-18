@@ -17,12 +17,53 @@ Para modelar y representar cosas o aspectos de nuestro entorno utilizamos aplica
 Para el desarrollo de este taller se uso principalmete la biblioteca [P5.js](https://p5js.org/es/) y sus funciones de objetos 3D, de estos podemos destacar el moviento de cámara , de personaje, creación de ambiente (columnas, paredes, suelo y techo) y colisiones.
 
 ### **Moviento de cámara**
+Para generar la sensacion de movimiento en primera persona se desplaza la cámara utilizando las teclas, y se rota la direccion en la que apunta utilizando el movimiento del mouse.
+Para lograr esto se utilizaron las funciones dispuestas en P5 para creacion y manipulación de la cámara.
+```javascript
+function draw(){
+          background(0);
+          noStroke();
+          cam.pan(ang(-D.cx));
+          cam.tilt(ang(D.cy));
+          D.r-=(mx*sensitivityX);
+          yAng-=(my*sensitivityY);
+         
+          cam.setPosition(D.x,-D.y,D.z);
+```
 
 
+### **Moviento de "personaje"**
+Para desplazar la cámara se desplazan las coordenadas de la cámara a una velocidad definida.
+```javascript
+          D.cx=mx*sensitivityX;
+          D.cy=my*sensitivityY;
+          //Moviviento adelante
+          if(keys[87] && keyIsDown(16)){
+            playerSpeed=5;
+            D.z-=cos(ang(D.r))*playerSpeed;
+            D.x-=sin(ang(D.r))*playerSpeed;
+          }
+          if(keys[87]){
+              D.z-=cos(ang(D.r))*playerSpeed;
+              D.x-=sin(ang(D.r))*playerSpeed;  
+          }
+         //Moviviento atras
+          if(keys[83]){
+              D.z+=cos(ang(D.r))*(playerSpeed-0.7);
+              D.x+=sin(ang(D.r))*(playerSpeed-0.7);  
+          }
+        //Moviviento izq
+          if(keys[65]){
+              D.z-=cos(ang(D.r+90))*playerSpeed;
+              D.x-=sin(ang(D.r+90))*playerSpeed;  
+          }
+          //Moviviento derecha
+          if(keys[68]){
+              D.z+=cos(ang(D.r+90))*playerSpeed;
+              D.x+=sin(ang(D.r+90))*playerSpeed;  
+          }
 
-
-### **Moviento de personaje**
-
+```
 
 
 
@@ -36,13 +77,13 @@ Las columnas son una estructura para limitar las paredes y a nosotros los desarr
 Dentro de la funcion `draw()` usamos un ciclo FOR anidado para crear las columnas del nivel, todas estan a la misma distacia una de la otra en el plano X y el plano Z.
 
 ```javascript
-for(var i = -2.5; i < 2.5; i++){
+        for(var i = -2.5; i < 2.5; i++){
           for(var j = -2.5; j < 2.5; j++){
           push();
           translate(i*500,1,j*500);
           rotateY(ang(90));
-          fill(228,225,70);
-
+          //fill(228,225,70);
+          texture(walls);
           box(30,120,30);
           pop();
           }
@@ -60,6 +101,7 @@ function pared(x,y,z,dx,dy,dz,l){
         rotateX(ang(dx));
         rotateY(ang(dy));
         rotateZ(ang(dz));
+        texture(walls);
         fill(180,153,81);
         plane(l,110);
         pop();
@@ -68,10 +110,21 @@ Donnde x, y & z son las coordenadas del punto de origen de la pared, dx, dy y dz
 
 ![Imagen paredes](https://imgur.com/Q5VXvHQ)
 
+### Texturas
+Para añadir las texturas a los techos se utilizó la funcion de P5 texture() y las imágenes de las texturas.
+```javascript
+function preload() {
+        roof = loadImage('assets/images/techo.png');
+        walls = loadImage('assets/images/walls.png');
+        floor = loadImage('assets/images/floor.png');
+      }
+```
+
 ## **Resultados**
 
 ### Aplicación completa.
-
+La aplicación completa se puede visualizar en el siguiente link al repositorio donde está el código de la aplicación [BACKROOM](https://sansanchezmo.github.io/BACKROOM/)
+O clonando el repositorio y ejecutandolo de manera local.
 
 
 ## **Discusión**
