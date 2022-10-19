@@ -2,7 +2,7 @@
 
 ## **Introducción**
 
-El modelamiento 3D es una herramienta que abre un mundo de posibilidades para representar el mundo real dentro del mundo digital. Inicialmente, los modelos en 2 dimensiones se utilizaban para diseñar todo tipo de invenciones, tales como juegos, herramientas de desarrollo e incluso modelos de la vida real. Desde hace mucho tiempo, se utiliza el 2D y ha sido muy útil para los desarrolladores. Sin embargo, un mundo en 3 dimensiones es más semejante a la realidad, por lo que el modelamiento 3D desde hace ya varios años se ha convertido en una herramienta de representación de la realidad mucho más poderosa.
+El modelamiento 3D es una herramienta que abre un mundo de posibilidades para representar el mundo real dentro del mundo digital. Inicialmente, los modelos en 2 dimensiones se utilizaban para diseñar todo tipo de invenciones, tales como: juegos, herramientas de desarrollo e incluso modelos de la vida real. Desde hace mucho tiempo, se utiliza el 2D y ha sido muy útil para los desarrolladores. Sin embargo, un mundo en 3 dimensiones es más semejante a la realidad, por lo que el modelamiento 3D desde hace ya varios años se ha convertido en una herramienta de representación de la realidad mucho más poderosa.
 
 Para modelar y representar cosas o aspectos de nuestro entorno utilizamos aplicaciones gráficas. Estas, tanto en 2D como en 3D, abren muchas posibilidades de diseño e interacción con el mundo digital. Por esto, **WebGl** busca acercar aún más (tanto a *desarrolladores* como a los apasionados por el modelamiento y la *interacción gráfica*) a utilizar recursos básicos en nuestro entorno digital como un navegador y una librería de Javascript, y así empezar a diseñar aplicaciones gráficas interactivas en la Web e incursionar en el mundo del modelamiento digital.
 
@@ -10,7 +10,13 @@ Para modelar y representar cosas o aspectos de nuestro entorno utilizamos aplica
 ![3D Sphere](https://i.imgur.com/SKVtRzn.gif)
 
 ## **Marco teórico**
+Para el desarrollo del presenta taller, es necesario entender los conceptos que los envuelven. El primero de ellos es [WebGL](https://www.khronos.org/api/webgl), una *especificación estándar que define una API implementada en JavaScript para la renderización de gráficos en 3D dentro de cualquier navegador web*, el cual permite la combinación con todos los estándares web del navegador, permitiendo el procesamiento de *canvas* y la combinación con diferentes elementos de HTML. Es un [motor de rasterización](https://webglfundamentals.org/webgl/lessons/webgl-fundamentals.html), el cual se ejecuta en la GPU de la computadora del desarrollador y que dibuja líneas, puntos y triángulos basados en el código suministrado. Adicionalmente, las instrucciones dadas son proporcionadas por WebGL en forma de pares de funciones, el *sombreador de vértices* y el *sombreador de fragmentos*, los cuales calculan las posiciones de vértices y calculan un color para cada píxel de lo primitivo que se está dibujando, respectivamente.
 
+Un componente fundamental de WebGL para el presente proyecto, es el de [cámara](https://webglfundamentals.org/webgl/lessons/webgl-3d-camera.html), el cual utiliza propiedades matriciales y la aplicación de la matemática para visualización de imágenes según es requerido por el usuario. Las principales funcionalidades se encuentran en la rotación, movimiento e inversión de la visión del usuario, las cuales tienen múltiples aplicaciones en los campos de geografía y videojuegos, facilitando la inmersión en un campo de tres dimensiones.
+
+El último de los conceptos importantes, es el de *Backroom*, siendo este la base del proyecto desarrollado. Los [*Backrooms*](https://es.wikipedia.org/wiki/The_Backrooms) es una leyenda urbana originada en un tablón de *4Chan* en el año 2019, el cual inicialmente describe una habitación inquietante de origen y propósitos desconocidos.
+![Image Backrooms](https://i.imgur.com/XxYxOOQ.png)
+El impacto que generó la publicación permitió la extensión de este universo, que ahora describe un mundo alterno que se encuentra compuesto por una gran cantidad de niveles laberínticos y entidades que habitan allí, los cuales interactúan con las personas que accidentalmente caen allí. 
 
 ## **Método**
 
@@ -135,7 +141,7 @@ Donnde x, y & z son las coordenadas del punto de origen de la pared, dx, dy y dz
 
 ![Imagen paredes](https://i.imgur.com/Q5VXvHQ.png)
 
-### Teho y suelo
+### Techo y suelo
 
 Igual que las columnas se crean con un ciclo FOR y ayudan a limitar las habitaciones y pasillos en el juego.
 
@@ -221,14 +227,14 @@ O clonando el repositorio y ejecutandolo de manera local.
 
 
 ## **Discusión**
-Teniendo como inspiración o idea fuente el concepto de las leyendas urbanas sobre los “Backrooms”, se discutió acerca de las características qué debe cumplir la aplicación para lograr transmitir esta idea. Se consultaron fuentes referentes al tema del uso de la rotación y desplazamiento de la cámara y el uso de los colores y de las texturas en los objetos.
+Teniendo como inspiración o idea fuente el concepto de las leyendas urbanas sobre los “Backrooms”, se discutió acerca de las características qué debe cumplir la aplicación para lograr transmitir un tipo de idea, en este caso, el del terror y suspenso causado por lo extraño del ambiente. Se consultaron fuentes referentes al tema del uso de la rotación y desplazamiento de la cámara y el uso de los colores y de las texturas en los objetos.
 
-Teniendo en cuenta lo mencionado anteriormente en el marco teórico, también se discutieron las aplicaciones del uso de la cámara en entornos digitales como videojuegos o distintas aplicaciones interactivas. De la misma manera, se discutió acerca de la importancia de aspectos como la disposición e interacciones de la cámara, junto a la ambientación, para simular situaciones o generar emociones en los usuarios y espectadores.
+Teniendo en cuenta lo mencionado anteriormente en el [marco teórico](#marco-teórico), también se discutieron las aplicaciones del uso de la cámara en entornos digitales como videojuegos o distintas aplicaciones interactivas. De la misma manera, se conversó acerca de la importancia de aspectos como la disposición e interacciones de la cámara, junto a la ambientación, para simular situaciones o generar emociones en los usuarios y espectadores.
 
 ## **Conclusiones**
-Pudimos concluir que el uso de la cámara, su rotación y desplazamiento, depende del propósito que se quiera lograr. En nuestro caso el uso de una cámara que se mantenga en primera persona dio mejores resultados para adaptarse al concepto original. Así como se puede considerar la cámara en tercera persona mejor para otros propósitos.
+Se puede concluir que el uso de la cámara, su rotación y desplazamiento, depende del propósito que se quiera lograr. En el caso del presente proyecto el uso de una cámara que se mantenga en primera persona dio mejores resultados para adaptarse al concepto original. Así como se puede considerar la cámara en tercera persona mejor para otros propósitos.
 
-Además, que la creación de una habitación y/o pasillo es en esencia el uso de traslación y rotaciones, que adaptamos para crear este ambiente de BACKROOM, el uso de planos similares y repetitivos gracias a los ciclos FOR dan un toque tétrico que fue siempre nuestro objetivo.
+Además, que la creación de una habitación y/o pasillo es en esencia el uso de traslación y rotaciones, que se adaptaron para crear este ambiente de *Backroom*, el uso de planos similares y repetitivos gracias a los ciclos FOR dan un toque tétrico que fue siempre el objetivo.
 
-
+Se pudo notar, adicionalmente, la importancia de librerías y aplicaciones preexistentes de diferentes funcionalidades, las cuales permiten un aprendizaje más eficiente de las diferentes posibilidades que tiene, en este caso, WebGL y P5.
 
