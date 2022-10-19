@@ -20,11 +20,11 @@ El impacto que generó la publicación permitió la extensión de este universo,
 
 ## **Método**
 
-Para el desarrollo de este taller se uso principalmete la biblioteca [P5.js](https://p5js.org/es/) y sus funciones de objetos 3D, de estos podemos destacar el moviento de cámara , de personaje, creación de ambiente (columnas, paredes, suelo y techo) y colisiones.
+Para el desarrollo de este taller se uso principalmete la biblioteca [P5.js](https://p5js.org/es/) y sus funciones de objetos 3D, de estos se puede destacar el moviento de cámara, de personaje, creación de ambiente (columnas, paredes, suelo y techo) y colisiones.
 
 ### **Movimiento de cámara**
 Para generar la sensación de movimiento en primera persona se desplaza la cámara utilizando las teclas, y se rota la dirección en la que apunta utilizando el movimiento del mouse.
-Para lograr esto se utilizaron las funciones dispuestas en P5 para creacion y manipulación de la cámara.
+Para lograr esto, se utilizaron las funciones dispuestas en P5 para creación y manipulación de la cámara.
 ```javascript
 function draw(){
           background(0);
@@ -38,7 +38,7 @@ function draw(){
 ```
 ### Corrección de cámara
 
-La cámara para mantenerla dentro de la ventana cuando se deja de mover el mouse después de un movimiento suave devuelve sus variables D.x, D.y y D.z a 0.
+Para mantener la cámara dentro de la ventana cuando se deja de mover el mouse después de un movimiento suave devuelve sus variables D.x, D.y y D.z a 0.
 
 ```javascript
 if(mx > 0){
@@ -54,7 +54,7 @@ if(mx > 0){
             my++;
         }
 ```
-Al hacer un movimiento fuerte y prolongado de la cámara giraría sin control, pero colocamos este limitador para que no suceda.
+Al hacer un movimiento fuerte y prolongado de la cámara giraría sin control, pero se utilizó este limitador para que no suceda.
 
 ```javascript
 //Evitar que la camara gire sin control
@@ -123,7 +123,7 @@ for(var i = -2.5; i < 2.5; i++){
 ![Imagen columnas](https://i.imgur.com/UzQRwyr.png)
 
 ### Paredes
-Las paredes crean los pasillos y habitaciones del juego, se crean con la funcion `pared()` que definimos y crea un plano con la función `plane()` de P5 ademas le agregamos las coordenas y modifiacion en los planos X, Y y Z.
+Las paredes crean los pasillos y habitaciones del juego, se crean con la función `pared()` que definimos y crea un plano con la función `plane()` de P5. Además, le agregamos las coordenadas y modificación en los planos X, Y y Z.
 
 ```javascript
 function pared(x,y,z,dx,dy,dz,l){
@@ -137,7 +137,7 @@ function pared(x,y,z,dx,dy,dz,l){
         plane(l,110);
         pop();
 ```
-Donnde x, y & z son las coordenadas del punto de origen de la pared, dx, dy y dz son los angulos de inclinacion del plano y l es la longitud.
+Donde x, y & z son las coordenadas del punto de origen de la pared, dx, dy y dz son los ángulos de inclinación del plano y l es la longitud.
 
 ![Imagen paredes](https://i.imgur.com/Q5VXvHQ.png)
 
@@ -222,8 +222,7 @@ if(D.z>=230){
 ## **Resultados**
 
 ### Aplicación completa.
-La aplicación completa se puede visualizar en el siguiente link al repositorio donde está el código de la aplicación [BACKROOM](https://sansanchezmo.github.io/BACKROOM/)
-O clonando el repositorio y ejecutandolo de manera local.
+La aplicación completa se puede visualizar en el siguiente link al repositorio donde está el código de la aplicación [BACKROOM](https://sansanchezmo.github.io/BACKROOM/) o clonando el repositorio y ejecutándolo de manera local.
 
 
 ## **Discusión**
