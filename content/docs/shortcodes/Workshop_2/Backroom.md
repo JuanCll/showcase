@@ -16,7 +16,7 @@ Para modelar y representar cosas o aspectos de nuestro entorno utilizamos aplica
 
 Para el desarrollo de este taller se uso principalmete la biblioteca [P5.js](https://p5js.org/es/) y sus funciones de objetos 3D, de estos podemos destacar el moviento de cámara , de personaje, creación de ambiente (columnas, paredes, suelo y techo) y colisiones.
 
-### **Moviento de cámara**
+### **Movimiento de cámara**
 Para generar la sensación de movimiento en primera persona se desplaza la cámara utilizando las teclas, y se rota la dirección en la que apunta utilizando el movimiento del mouse.
 Para lograr esto se utilizaron las funciones dispuestas en P5 para creacion y manipulación de la cámara.
 ```javascript
@@ -30,7 +30,7 @@ function draw(){
 
           cam.setPosition(D.x,-D.y,D.z);
 ```
-### Correción de cámara
+### Corrección de cámara
 
 LA camara para mantnerla dentro de la ventana cuando se deja de mover depues de un movimiento suave devuelve sus variables D.x, D.y y D.z a 0.
 
@@ -50,7 +50,7 @@ if(mx > 0){
 ```
 
 
-### **Moviento de "personaje"**
+### **Movimiento de "personaje"**
 Para desplazar la cámara se desplazan las coordenadas de la cámara a una velocidad definida.
 ```javascript
           D.cx=mx*sensitivityX;
