@@ -40,6 +40,7 @@ var $ = function(prop){
     function setup(){
         createCanvas(window.innerWidth,window.innerHeight,WEBGL);
         cam = createCamera();
+        perspective(PI / 3.0, width / height, 0.1, 5000);
         // Carga de efectos de sonido
         stepsSound = loadSound('assets/audio/step.mp3');
 
