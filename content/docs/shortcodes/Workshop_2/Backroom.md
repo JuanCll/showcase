@@ -32,7 +32,7 @@ function draw(){
 ```
 ### Corrección de cámara
 
-LA camara para mantnerla dentro de la ventana cuando se deja de mover depues de un movimiento suave devuelve sus variables D.x, D.y y D.z a 0.
+La cámara para mantenerla dentro de la ventana cuando se deja de mover el mouse después de un movimiento suave devuelve sus variables D.x, D.y y D.z a 0.
 
 ```javascript
 if(mx > 0){
@@ -48,7 +48,14 @@ if(mx > 0){
             my++;
         }
 ```
+Al hacer un movimiento fuerte y prolongado de la cámara giraría sin control, pero colocamos este limitador para que no suceda.
 
+```javascript
+//Evitar que la camara gire sin control
+        if(mx>30 || mx <-30){
+          mx=0;
+        }
+```
 
 ### **Movimiento de "personaje"**
 Para desplazar la cámara se desplazan las coordenadas de la cámara a una velocidad definida.
@@ -204,15 +211,6 @@ if(D.z>=230){
         D.z=100;
       
       }
-```
-
-Al hacer un movimiento fuerte y prolongado de la cámara giraría sin control, pero colocamos este limitador para que no suceda.
-
-```javascript
-//Evitar que la camara gire sin control
-        if(mx>30 || mx <-30){
-          mx=0;
-        }
 ```
 
 ## **Resultados**
