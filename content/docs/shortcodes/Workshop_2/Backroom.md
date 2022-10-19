@@ -27,7 +27,7 @@ function draw(){
           cam.tilt(ang(D.cy));
           D.r-=(mx*sensitivityX);
           yAng-=(my*sensitivityY);
-         
+
           cam.setPosition(D.x,-D.y,D.z);
 ```
 
@@ -69,7 +69,7 @@ Para desplazar la cámara se desplazan las coordenadas de la cámara a una veloc
 
 ### **Creación de ambiente**
 
-Para facilitar la creación de niveles y mantener la escencia de un BACKROOM tradicional, la creación de varias estructuras es a traves de ciclos FOR, principalmente en las columnas y el techo.
+Para facilitar la creación de niveles y mantener la escencia de un BACKROOM tradicional, la creación de varias estructuras es a traves de ciclos FOR, principalmente en las columnas, suelo y el techo.
 
 ### Columnas
 Las columnas son una estructura para limitar las paredes y a nosotros los desarrolladores nos ayuda a ubicar puntos estrategicos en el nivel para su creación, y ayudar a crear un efecto que confunda al jugador haciendo que las habitasciones sean similares.
@@ -77,7 +77,7 @@ Las columnas son una estructura para limitar las paredes y a nosotros los desarr
 Dentro de la funcion `draw()` usamos un ciclo FOR anidado para crear las columnas del nivel, todas estan a la misma distacia una de la otra en el plano X y el plano Z.
 
 ```javascript
-        for(var i = -2.5; i < 2.5; i++){
+for(var i = -2.5; i < 2.5; i++){
           for(var j = -2.5; j < 2.5; j++){
           push();
           translate(i*500,1,j*500);
@@ -92,7 +92,7 @@ Dentro de la funcion `draw()` usamos un ciclo FOR anidado para crear las columna
 ![Imagen columnas](https://imgur.com/a/0urxtRi)
 
 ### Paredes
-Las paredes crean los pasillos y habitaciones del juego, se crean con la funcion `pared()` que definimos, crea un plano con la función `plane()` de P5 y le agregamos las coordenas y modifiacion en los planos X, Y y Z.
+Las paredes crean los pasillos y habitaciones del juego, se crean con la funcion `pared()` que definimos y crea un plano con la función `plane()` de P5 ademas le agregamos las coordenas y modifiacion en los planos X, Y y Z.
 
 ```javascript
 function pared(x,y,z,dx,dy,dz,l){
@@ -110,6 +110,47 @@ Donnde x, y & z son las coordenadas del punto de origen de la pared, dx, dy y dz
 
 ![Imagen paredes](https://imgur.com/Q5VXvHQ)
 
+### Teho y suelo
+
+Igual que las columnas se crean con un ciclo FOR y ayudan a limitar las habitaciones y pasillos en el juego.
+
+```javascript
+//Suelo
+        for(var k = -20; k < 20; k++){
+          for(var l = -20; l < 20; l++){
+            push();
+            translate(k*100,50,l*100);
+            rotateX(ang(90));
+            fill(100);
+            texture(floor);
+            plane(100);
+            pop();
+          }
+        }
+
+        //Piso del piso
+        push();
+        translate(0,100,0);
+        rotateX(ang(90));
+        //fill(167, 164, 61);
+        texture(floor);
+        plane(10000);
+        pop();
+
+        //Techo
+        for(var k = -5; k < 5; k++){
+          for(var l = -5; l < 5; l++){
+            push();
+            translate(k*500,-90,l*500);
+            rotateX(ang(90));
+            fill(100);
+            texture(roof);
+            plane(500);
+            pop();
+          }
+        }
+```
+
 ### Texturas
 Para añadir las texturas a los techos se utilizó la funcion de P5 texture() y las imágenes de las texturas.
 ```javascript
@@ -117,8 +158,12 @@ function preload() {
         roof = loadImage('assets/images/techo.png');
         walls = loadImage('assets/images/walls.png');
         floor = loadImage('assets/images/floor.png');
-      }
+        }
 ```
+
+### **Colisiones**
+
+
 
 ## **Resultados**
 
@@ -131,8 +176,6 @@ O clonando el repositorio y ejecutandolo de manera local.
 Teniendo como inspiración o idea fuente el concepto de las leyendas urbanas sobre los “Backrooms”, se discutió acerca de las características qué debe cumplir la aplicación para lograr transmitir esta idea. Se consultaron fuentes referentes al tema del uso de la rotación y desplazamiento de la cámara y el uso de los colores y de las texturas en los objetos.
 
 Teniendo en cuenta lo mencionado anteriormente en el marco teórico, también se discutieron las aplicaciones del uso de la cámara en entornos digitales como videojuegos o distintas aplicaciones interactivas. De la misma manera, se discutió acerca de la importancia de aspectos como la disposición e interacciones de la cámara, junto a la ambientación, para simular situaciones o generar emociones en los usuarios y espectadores.
-
-
 
 ## **Conclusiones**
 Pudimos concluir que el uso de la cámara, su rotación y desplazamiento, depende del propósito que se quiera lograr. En nuestro caso el uso de una cámara que se mantenga en primera persona dio mejores resultados para adaptarse al concepto original. Así como se puede considerar la cámara en tercera persona mejor para otros propósitos.
