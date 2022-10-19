@@ -230,5 +230,7 @@ Teniendo en cuenta lo mencionado anteriormente en el marco teórico, también se
 ## **Conclusiones**
 Pudimos concluir que el uso de la cámara, su rotación y desplazamiento, depende del propósito que se quiera lograr. En nuestro caso el uso de una cámara que se mantenga en primera persona dio mejores resultados para adaptarse al concepto original. Así como se puede considerar la cámara en tercera persona mejor para otros propósitos.
 
+Además, que la creación de una habitación y/o pasillo es en esencia el uso de traslación y rotaciones, que adaptamos para crear este ambiente de BACKROOM, el uso de planos similares y repetitivos gracias a los ciclos FOR dan un toque tétrico que fue siempre nuestro objetivo.
+
 
 
