@@ -107,7 +107,7 @@ for(var i = -2.5; i < 2.5; i++){
           }
         }
 ```
-![Imagen columnas](https://imgur.com/a/0urxtRi)
+![Imagen columnas](https://i.imgur.com/UzQRwyr.png)
 
 ### Paredes
 Las paredes crean los pasillos y habitaciones del juego, se crean con la funcion `pared()` que definimos y crea un plano con la función `plane()` de P5 ademas le agregamos las coordenas y modifiacion en los planos X, Y y Z.
@@ -126,7 +126,7 @@ function pared(x,y,z,dx,dy,dz,l){
 ```
 Donnde x, y & z son las coordenadas del punto de origen de la pared, dx, dy y dz son los angulos de inclinacion del plano y l es la longitud.
 
-![Imagen paredes](https://imgur.com/Q5VXvHQ)
+![Imagen paredes](https://i.imgur.com/Q5VXvHQ.png)
 
 ### Teho y suelo
 
