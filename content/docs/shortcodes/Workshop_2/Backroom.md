@@ -30,6 +30,24 @@ function draw(){
 
           cam.setPosition(D.x,-D.y,D.z);
 ```
+### Correción de cámara
+
+LA camara para mantnerla dentro de la ventana cuando se deja de mover depues de un movimiento suave devuelve sus variables D.x, D.y y D.z a 0.
+
+```javascript
+if(mx > 0){
+            mx--;
+        }
+        if(mx < 0){
+            mx++;
+        }
+        if(my > 0){
+            my--;
+        }
+        if(my < 0){
+            my++;
+        }
+```
 
 
 ### **Moviento de "personaje"**
@@ -163,7 +181,39 @@ function preload() {
 
 ### **Colisiones**
 
+Al no tener una función definida para las colisiones limitaciones de movimiento al llegar a una pared con condicionales para que el jugador no pueda atravesarlas, es la creación de la habitación con sus coordenadas y mover al jugador a una posición atrás para dar la sensación de que no se puede avanzar más.
 
+```javascript
+if(D.z>=230){
+        D.z=229
+      }
+      if(D.x>=230){
+        D.x=229
+      }
+      if(D.z<=-1230){
+        D.z= -1229
+      }
+      if(D.x<=-230 && D.x>=-260 && D.z>=-730 ){
+        D.x=-229
+      }
+      if(D.x<-250 && D.z>=-770 ){
+        D.z=-769;
+      }
+      if(D.x<-1230 ){
+        D.x=0;
+        D.z=100;
+      
+      }
+```
+
+Al hacer un movimiento fuerte y prolongado de la cámara giraría sin control, pero colocamos este limitador para que no suceda.
+
+```javascript
+//Evitar que la camara gire sin control
+        if(mx>30 || mx <-30){
+          mx=0;
+        }
+```
 
 ## **Resultados**
 
