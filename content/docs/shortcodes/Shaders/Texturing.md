@@ -21,3 +21,4 @@ Include the blue channel in the uv visualization (e.g., use blue with red or gre
 Luma
 
 {{< p5-iframe sketch="/showcase/sketches/SHADERS/brightness_tinting/brightness_tinting.js" width="725" height="525" >}}
+
