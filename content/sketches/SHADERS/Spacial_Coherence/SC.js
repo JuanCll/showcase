@@ -63,27 +63,27 @@ function setup() {
   photoSelect.selected(`Photo${photoA}`)
   photoSelect.changed(() => {
     if (photoSelect.value() == 'Photo1'){
-      image_src = loadImage(`photos/Photo1.jpg`);
+      image_src = loadImage(`/showcase/sketches/photos/Photo1.jpg`);
       mosaic.setUniform('source', image_src);
       
     }
     if (photoSelect.value() == 'Photo2'){
-      image_src = loadImage(`photos/Photo2.jpg`);
+      image_src = loadImage(`/showcase/sketches/photos/Photo2.jpg`);
       mosaic.setUniform('source', image_src);
       
     }
     if (photoSelect.value() == 'Photo3'){
-      image_src = loadImage(`photos/Photo3.jpg`);
+      image_src = loadImage(`p/showcase/sketches/photos/Photo3.jpg`);
       mosaic.setUniform('source', image_src);
       
     }
     if (photoSelect.value() == 'Photo4'){
-      image_src = loadImage(`photos/Photo4.jpg`);
+      image_src = loadImage(`/showcase/sketches/photos/Photo4.jpg`);
       mosaic.setUniform('source', image_src);
       
     }
     if (photoSelect.value() == 'Photo5'){
-      image_src = loadImage(`photos/Photo5.jpg`);
+      image_src = loadImage(`/showcase/sketches/photos/Photo5.jpg`);
       mosaic.setUniform('source', image_src);
       
     }
