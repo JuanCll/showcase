@@ -1,13 +1,16 @@
+//'use strict';
 let lumaShader;
 let img;
 let grey_scale;
 let hsv_scale;
 let brightnessO;
-const brightnessD  = {'None': 0, 'Luma':1, 'HSV':2};
-function preload() {
-  lumaShader = readShader('/showcase/sketches/SHADERS/brightness_tinting/luma.frag',{matrices: Tree.NONE, varyings: Tree.texcoords2 });
+const brightnessD  = {'None': 0, 'Luma':1, 'HSV':2, 'HSL':3};
 
-  img = loadImage(`/showcase/sketches/perro_foto.jpg`);
+function preload() {
+  lumaShader = readShader('/showcase/sketches/SHADERS/brightness_tinting/luma.frag',{varyings: Tree.texcoords2 });
+  
+  img = loadImage('/showcase/sketches/perro_foto.jpg');
+  
 }
 
 function setup() {
@@ -15,7 +18,7 @@ function setup() {
   noStroke();
   textureMode(NORMAL);
   shader(lumaShader);
-  brightnessTool = 'None'
+  //brightnessTool = 'None'
 
   brightnessO = createSelect();
   brightnessO.position(15, 15);
@@ -24,6 +27,7 @@ function setup() {
   brightnessO.option('None'); 
   brightnessO.option('Luma'); 
   brightnessO.option('HSV');
+  brightnessO.option('HSL');
 
   lumaShader.setUniform('texture', img);
 }
@@ -31,7 +35,8 @@ function setup() {
 function draw() {
   background(255);
   lumaShader.setUniform('brightnessO', brightnessD[brightnessO.value()]);
-  //console.log(brightnessO);
+  
   quad(-width / 2, -height / 2, width / 2, -height / 2,
         width / 2, height / 2, -width / 2, height / 2);
+  
 }
