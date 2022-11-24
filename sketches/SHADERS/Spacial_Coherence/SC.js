@@ -13,7 +13,8 @@ function preload() {
   // and named sequentially as: p1.jpg, p2.jpg, ... p30.jpg
   // so we pick up one randomly just for fun:
   //image_src = loadImage(`/sketches/shaders/paintings/p${int(random(1, 3))}.jpg`);
-  image_src = loadImage(`/showcase/sketches/photos/p${int(random(1, 3))}.jpg`);
+  photoA = int(random(1, 6));
+  image_src = loadImage(`/showcase/sketches/photos/Photo${photoA}.jpg`);
   video_src = createVideo(['/showcase/sketches/mapache.webm']);
   video_src.hide();
   mosaic = readShader('/showcase/sketches/SHADERS/Spacial_Coherence/SC.frag',
@@ -49,6 +50,31 @@ function setup() {
   mode.selected('pixelator');
   mode.changed(() => {
     mosaic.setUniform('original', mode.value() === 'original');
+  });
+  photoSelect = createSelect();
+  photoSelect.position(10, 95);
+  photoSelect.option('Photo1');
+  photoSelect.option('Photo2');
+  photoSelect.option('Photo3');
+  photoSelect.option('Photo4');
+  photoSelect.option('Photo5');
+  photoSelect.selected(`Photo${photoA}`)
+  photoSelect.changed(() => {
+    if (photoSelect.value() == 'Photo1'){
+      image_src = loadImage(`photos/Photo1.jpg`);
+      mosaic.setUniform('source', image_src);
+      
+    }
+    if (photoSelect.value() == 'Photo2'){
+      image_src = loadImage(`photos/Photo2.jpg`);
+      mosaic.setUniform('source', image_src);
+      
+    }
+    if (photoSelect.value() == 'Photo3'){
+      image_src = loadImage(`photos/Photo3.jpg`);
+      mosaic.setUniform('source', image_src);
+      
+    }
   });
 }
 
