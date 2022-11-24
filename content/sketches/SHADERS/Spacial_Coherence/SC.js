@@ -7,6 +7,8 @@ let mosaic;
 let resolution;
 let video_on;
 let mode;
+let photoSelect;
+let photoA;
 
 function preload() {
   // paintings are stored locally in the /sketches/shaders/paintings dir
