@@ -7,7 +7,7 @@ const brightnessD  = {'None': 0, 'Luma':1, 'HSV':2};
 function preload() {
   lumaShader = readShader('/showcase/sketches/SHADERS/brightness_tinting/luma.frag',{matrices: Tree.NONE, varyings: Tree.texcoords2 });
 
-  img = loadImage('/showcase/sketches/perro_foto.jpg');
+  img = loadImage(`/showcase/sketches/perro_foto.jpg`);
 }
 
 function setup() {
