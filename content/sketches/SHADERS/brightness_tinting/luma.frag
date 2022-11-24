@@ -1,9 +1,6 @@
 precision mediump float;
 
 // uniforms are defined and sent by the sketch
-
-uniform bool grey_scale;
-uniform bool hsv_scale;
 uniform sampler2D texture;
 uniform int brightnessO;
 
@@ -16,6 +13,12 @@ float luma(vec3 texel) {
 }
 float hsv(vec3 texel){
   return max(max(texel.r, texel.g), texel.b);
+}
+float hsl(vec3 texel){
+  float maxColor = max(max(texel.r, texel.g), texel.b);
+  float minColor = min(min(texel.r, texel.g), texel.b);
+
+  return (maxColor + minColor)/2.0;
 }
 
 void main() {
@@ -31,6 +34,9 @@ void main() {
   }
   else if (brightnessO == 2){
     texel = vec4((vec3(hsv(texel.rgb))), 1.0);
+  }
+  else if (brightnessO == 3){
+    texel = vec4((vec3(hsl(texel.rgb))), 1.0);
   }
   gl_FragColor = texel;
 }
