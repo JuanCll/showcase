@@ -13,7 +13,7 @@ function preload() {
   // and named sequentially as: p1.jpg, p2.jpg, ... p30.jpg
   // so we pick up one randomly just for fun:
   //image_src = loadImage(`/sketches/shaders/paintings/p${int(random(1, 3))}.jpg`);
-  image_src = loadImage(`/showcase/sketches/doge.jpg`);
+  image_src = loadImage(`/showcase/sketches/photos/p${int(random(1, 3))}.jpg`);
   video_src = createVideo(['/showcase/sketches/mapache.webm']);
   video_src.hide();
   mosaic = readShader('/showcase/sketches/SHADERS/Spacial_Coherence/SC.frag',
