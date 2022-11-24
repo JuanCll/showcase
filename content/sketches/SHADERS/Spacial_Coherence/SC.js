@@ -16,7 +16,7 @@ function preload() {
   image_src = loadImage(`content/sketches/doge.jpg`);
   video_src = createVideo(['content/sketches/mapache.webm']);
   video_src.hide();
-  mosaic = readShader('content/sketches/SHADERS/Spacial_Coherence/SC.frag',
+  mosaic = readShader('/showcase/sketches/SHADERS/Spacial_Coherence/SC.frag',
            { matrices: Tree.NONE, varyings: Tree.texcoords2 });
 }
 
