@@ -77,6 +77,16 @@ function setup() {
       mosaic.setUniform('source', image_src);
       
     }
+    if (photoSelect.value() == 'Photo4'){
+      image_src = loadImage(`photos/Photo4.jpg`);
+      mosaic.setUniform('source', image_src);
+      
+    }
+    if (photoSelect.value() == 'Photo5'){
+      image_src = loadImage(`photos/Photo5.jpg`);
+      mosaic.setUniform('source', image_src);
+      
+    }
   });
 }
 
