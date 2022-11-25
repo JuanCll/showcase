@@ -73,7 +73,7 @@ function setup() {
       
     }
     if (photoSelect.value() == 'Photo3'){
-      image_src = loadImage(`p/showcase/sketches/photos/Photo3.jpg`);
+      image_src = loadImage(`/showcase/sketches/photos/Photo3.jpg`);
       mosaic.setUniform('source', image_src);
       
     }
