@@ -32,7 +32,7 @@ function setup() {
   opacity.style('width', '280px');
   
   checkbox = createCheckbox('Blue Channel', false);
-  checkbox.style('color', 'white');
+  checkbox.style('color', 'black');
   checkbox.changed(myCheckedEvent);
 }
 

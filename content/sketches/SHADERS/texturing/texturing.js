@@ -5,7 +5,7 @@ let colorShader;
 let brickShader;
 let dotsShader;
 let textura;
-const opcionesS  = {'None': 0, 'truchet':1, 'color':2,'bricks':3,'dots':4};
+const opcionesS  = {'None': 0, 'truchet':1, 'color':2,'bricks':3,'dots':4, 'plasma':5};
 
 function preload() {
   // shader adapted from here: https://thebookofshaders.com/09/
@@ -16,7 +16,9 @@ function preload() {
   brickShader = readShader('/showcase/sketches/SHADERS/texturing/texturing_bricks.frag',
                              { matrices: Tree.NONE, varyings: Tree.NONE });   
   dotsShader = readShader('/showcase/sketches/SHADERS/texturing/texturing_dots.frag',
-                             { matrices: Tree.NONE, varyings: Tree.NONE });                        
+                             { matrices: Tree.NONE, varyings: Tree.NONE }); 
+  plasmaShader = readShader('/showcase/sketches/SHADERS/texturing/texturing_plasma.frag',
+                             { matrices: Tree.NONE, varyings: Tree.NONE })                                                 
 }
 
 function setup() {
@@ -34,6 +36,7 @@ function setup() {
   textura.option('color');
   textura.option('bricks');
   textura.option('dots');
+  textura.option('plasma');
 
 }
 
@@ -85,6 +88,15 @@ function draw() {
     pg.noStroke();
     pg.shader(dotsShader);
     pg.emitResolution(dotsShader);
+    //dotsShader.setUniform('u_zoom', 3);
+    pg.quad(-1, -1, 1, -1, 1, 1, -1, 1);
+    texture(pg);
+  }
+  else if (opcionesS[textura.value()] == 5){
+    pg.textureMode(NORMAL);
+    pg.noStroke();
+    pg.shader(plasmaShader);
+    pg.emitResolution(plasmaShader);
     //dotsShader.setUniform('u_zoom', 3);
     pg.quad(-1, -1, 1, -1, 1, 1, -1, 1);
     texture(pg);

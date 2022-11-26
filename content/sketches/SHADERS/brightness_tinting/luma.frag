@@ -23,6 +23,9 @@ float hsl(vec3 texel){
 
   return (maxColor + minColor)/2.0;
 }
+float average(vec3 texel) {
+  return (texel.r + texel.g + texel.b)/3.0;
+}
 
 vec4 blend(vec4 texel){
   return color_tinte * texel;
@@ -63,6 +66,9 @@ void main() {
   }
   else if (brightnessO == 3){
     texel = vec4((vec3(hsl(texel.rgb))), 1.0);
+  }
+  else if (brightnessO == 4){
+    texel = vec4((vec3(average(texel.rgb))), 1.0);
   }
 
   if (tinte_a){
