@@ -1,36 +1,45 @@
-/*vec3 noise(vec3 p)
-{
-    return 1.0 - 2.0 * abs(0.5 - textureLod(iChannel0, p, 0.0).xyz);
+#ifdef GL_ES
+precision mediump float;
+#endif
+
+uniform vec2 u_resolution;
+uniform vec2 u_mouse;
+uniform float u_time;
+
+float random (in vec2 st) {
+    return fract(sin(dot(st.xy,
+                         vec2(12.9898,78.233)))*
+        43758.5453123);
 }
 
-vec3 r(vec3 n)
-{
-    return pow(n, vec3(6.0, 4.0, 9.0));
+vec2 random2(vec2 p) {
+    return fract(sin(vec2(dot(p,vec2(127.1,311.7)),dot(p,vec2(269.5,183.3))))*43758.5453);
 }
 
-vec3 cnoise(vec3 p)
-{
-    vec3 size = 1.0 / vec3(textureSize(iChannel0, 0));
-	vec3 n0 = noise(p * size * 1.0);
-    vec3 n1 = noise(p * size * 2.0);
-    vec3 n2 = noise(p * size * 4.0);
-    vec3 n3 = noise(p * size * 8.0);
-    return (
-                       r(n0) * 0.5 +
-        n0 *           r(n1) * 0.25 +
-        n0 * n1 *      r(n2) * 0.125 +
-        n0 * n1 * n2 * r(n3) * 0.0625) * 1.06667;
+float cellular(vec2 p) {
+    vec2 i_st = floor(p);
+    vec2 f_st = fract(p);
+    float m_dist = 10.;
+    for (int j=-1; j<=1; j++ ) {
+        for (int i=-1; i<=1; i++ ) {
+            vec2 neighbor = vec2(float(i),float(j));
+            vec2 point = random2(i_st + neighbor);
+            point = 0.5 + 0.5*sin(6.2831*point);
+            vec2 diff = neighbor + point - f_st;
+            float dist = length(diff);
+            if( dist < m_dist ) {
+                m_dist = dist;
+            }
+        }
+    }
+    return m_dist;
 }
 
-void mainImage(out vec4 fragColor, in vec2 fragCoord)
-{
-    vec2 uv = 5.0 * fragCoord / iResolution.y;
-    vec3 n = cnoise(vec3(uv, 0.45 * iTime));
-
-    fragColor = vec4(
-        vec3(0.3, 0.0, 0.0) +
-        vec3(0.7, 0.2, 0.2) * n.x + 
-        vec3(0.1, 0.2, 0.1) * n.y + 
-        vec3(1.0, 1.0, 3.0) * n.z,
-        1.0);
-}*/
+void main() {
+    vec2 st = gl_FragCoord.xy / u_resolution.xy;
+    st.x *= u_resolution.x / u_resolution.y;
+    st *= 5.0;
+    float r = cellular(st);
+    float b = cellular(st - vec2(0.0, sin(u_time * 0.5) * 0.5));
+    gl_FragColor = vec4(r, 0.0, b, 1.0);
+}

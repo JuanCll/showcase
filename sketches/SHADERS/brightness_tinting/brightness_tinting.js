@@ -7,7 +7,7 @@ let brightnessO;
 let opcionS;
 let modo_tinte;
 let fotoS;
-const brightnessD  = {'None': 0, 'Luma':1, 'HSV':2, 'HSL':3};
+const brightnessD  = {'None': 0, 'Luma':1, 'HSV':2, 'HSL':3, 'Average':4};
 const opcionesS  = {'None': 0, 'blend':1, 'add':2,'darkest':3,'lightest':4, 'difference':5, 'burn':6};
 
 function preload() {
@@ -31,6 +31,7 @@ function setup() {
   brightnessO.option('Luma'); 
   brightnessO.option('HSV');
   brightnessO.option('HSL');
+  brightnessO.option('Average');
 
   fotoS = createSelect();
   fotoS.position(15, 45);
