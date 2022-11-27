@@ -1,7 +1,7 @@
 # **Lighting**
 
 {{<hint info>}}
-**Exercise Coloret Ambient light**
+**Exercise Colored Ambient light**
 
 Implement a scene having the following lighting equation: \mathbf{a} = ambient \, ambient4a=ambientambient4, where ambient4ambient4 is the ambient light color.
 {{</hint>}}
