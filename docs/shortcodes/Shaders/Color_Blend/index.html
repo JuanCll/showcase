@@ -1,7 +1,7 @@
 <!doctype html><html lang=en-us dir=ltr><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="Ejerecicios: Coloring # CMY y RGB # Marco teórico
 RGB es un modelo de color basado en la síntesis aditiva, con el que es posible representar un color mediante la mezcla por adición de los tres colores de luz primarios. El modelo CMY es un modelo de color sustractivo que se utiliza en la impresión en colores. Es la versión moderna y más precisa del antiguo modelo tradicional de coloración (RYB)."><meta name=theme-color content="#FFFFFF"><meta name=color-scheme content="light dark"><meta property="og:title" content><meta property="og:description" content="Ejerecicios: Coloring # CMY y RGB # Marco teórico
-RGB es un modelo de color basado en la síntesis aditiva, con el que es posible representar un color mediante la mezcla por adición de los tres colores de luz primarios. El modelo CMY es un modelo de color sustractivo que se utiliza en la impresión en colores. Es la versión moderna y más precisa del antiguo modelo tradicional de coloración (RYB)."><meta property="og:type" content="article"><meta property="og:url" content="https://visualcomputing.github.io/showcase/docs/shortcodes/Shaders/Color_Blend/"><meta property="article:section" content="docs"><meta property="article:modified_time" content="2022-11-26T16:27:36-05:00"><title>Color Blend | Computación Visual</title><link rel=manifest href=/showcase/manifest.json><link rel=icon href=/showcase/favicon.png type=image/x-icon><link rel=stylesheet href=/showcase/book.min.ab46de3e725a6415339a37bba23a0067534a37289b063c9f8d011515a63097a8.css integrity="sha256-q0bePnJaZBUzmje7ojoAZ1NKNyibBjyfjQEVFaYwl6g=" crossorigin=anonymous><script defer src=/showcase/flexsearch.min.js></script>
-<script defer src=/showcase/en.search.min.caf46a4cde957862785c736735987a6cb56e501910a9e96405f6fd67453d74f7.js integrity="sha256-yvRqTN6VeGJ4XHNnNZh6bLVuUBkQqelkBfb9Z0U9dPc=" crossorigin=anonymous></script></head><body dir=ltr><input type=checkbox class="hidden toggle" id=menu-control>
+RGB es un modelo de color basado en la síntesis aditiva, con el que es posible representar un color mediante la mezcla por adición de los tres colores de luz primarios. El modelo CMY es un modelo de color sustractivo que se utiliza en la impresión en colores. Es la versión moderna y más precisa del antiguo modelo tradicional de coloración (RYB)."><meta property="og:type" content="article"><meta property="og:url" content="https://visualcomputing.github.io/showcase/docs/shortcodes/Shaders/Color_Blend/"><meta property="article:section" content="docs"><meta property="article:modified_time" content="2022-11-27T17:41:19-05:00"><title>Color Blend | Computación Visual</title><link rel=manifest href=/showcase/manifest.json><link rel=icon href=/showcase/favicon.png type=image/x-icon><link rel=stylesheet href=/showcase/book.min.ab46de3e725a6415339a37bba23a0067534a37289b063c9f8d011515a63097a8.css integrity="sha256-q0bePnJaZBUzmje7ojoAZ1NKNyibBjyfjQEVFaYwl6g=" crossorigin=anonymous><script defer src=/showcase/flexsearch.min.js></script>
+<script defer src=/showcase/en.search.min.6ae4fa122e8aa7729fd929bea9e063bc23b4d1348492519a2b7dcd8495ba275e.js integrity="sha256-auT6Ei6Kp3Kf2Sm+qeBjvCO00TSEklGaK33NhJW6J14=" crossorigin=anonymous></script></head><body dir=ltr><input type=checkbox class="hidden toggle" id=menu-control>
 <input type=checkbox class="hidden toggle" id=toc-control><main class="container flex"><aside class=book-menu><div class=book-menu-content><nav><h2 class=book-brand><a class="flex align-center" href=/showcase/><span>Computación Visual</span></a></h2><div class=book-search><input type=text id=book-search-input placeholder=Search aria-label=Search maxlength=64 data-hotkeys=s/><div class="book-search-spinner hidden"></div><ul id=book-search-results></ul></div><ul><li class=book-section-flat><span>Shortcodes</span><ul><li><input type=checkbox id=section-37d133451a87125afc7e4d4a60cdb12b class=toggle checked>
 <label for=section-37d133451a87125afc7e4d4a60cdb12b class="flex justify-between"><a role=button>Shaders</a></label><ul><li><a href=/showcase/docs/shortcodes/Shaders/Color_Blend/ class=active>Color Blend</a></li><li><a href=/showcase/docs/shortcodes/Shaders/Procedural_texturing/>Procedural Texturing</a></li><li><a href=/showcase/docs/shortcodes/Shaders/Spacial_Coherence/>Spacial Coherence</a></li><li><a href=/showcase/docs/shortcodes/Shaders/Texturing/>Texturing</a></li></ul></li><li><input type=checkbox id=section-40370cffa0e58f63b3d83ad764ed10f8 class=toggle>
 <label for=section-40370cffa0e58f63b3d83ad764ed10f8 class="flex justify-between"><a role=button>Workshop 1</a></label><ul><li><a href=/showcase/docs/shortcodes/Workshop_1/Ilusiones/>Ilusiones</a></li><li><a href=/showcase/docs/shortcodes/Workshop_1/Masking/>Masking</a></li></ul></li><li><input type=checkbox id=section-b0370d58c5138517cd7aed0c003453ef class=toggle>
@@ -30,7 +30,169 @@ En el sketch a continuación se ve como se alterna entre estos dos modelos de co
           </body>
         </html>
       "></iframe><h2 id=color-blending><strong>Color Blending</strong>
-<a class=anchor href=#color-blending>#</a></h2><p>Aplicación de diferentes modos de blend</p><iframe id=color_blend style=width:325px;height:325px srcdoc="
+<a class=anchor href=#color-blending>#</a></h2><p>Aplicación de diferentes modos de blend</p><details><summary>blending js</summary><div class=markdown-inner><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-js data-lang=js><span style=display:flex><span><span style=color:#66d9ef>let</span> <span style=color:#a6e22e>shaderb</span>;
+</span></span><span style=display:flex><span><span style=color:#66d9ef>let</span> <span style=color:#a6e22e>shadera</span>;
+</span></span><span style=display:flex><span><span style=color:#66d9ef>let</span> <span style=color:#a6e22e>uMaterial1</span>;
+</span></span><span style=display:flex><span><span style=color:#66d9ef>let</span> <span style=color:#a6e22e>uMaterial2</span>;
+</span></span><span style=display:flex><span><span style=color:#66d9ef>let</span> <span style=color:#a6e22e>brightness</span>;
+</span></span><span style=display:flex><span><span style=color:#66d9ef>const</span> <span style=color:#a6e22e>opcionesS</span>  <span style=color:#f92672>=</span> {<span style=color:#e6db74>&#39;None&#39;</span><span style=color:#f92672>:</span> <span style=color:#ae81ff>0</span>, <span style=color:#e6db74>&#39;blend&#39;</span><span style=color:#f92672>:</span><span style=color:#ae81ff>1</span>, <span style=color:#e6db74>&#39;add&#39;</span><span style=color:#f92672>:</span><span style=color:#ae81ff>2</span>,<span style=color:#e6db74>&#39;darkest&#39;</span><span style=color:#f92672>:</span><span style=color:#ae81ff>3</span>,<span style=color:#e6db74>&#39;lightest&#39;</span><span style=color:#f92672>:</span><span style=color:#ae81ff>4</span>, <span style=color:#e6db74>&#39;difference&#39;</span><span style=color:#f92672>:</span><span style=color:#ae81ff>5</span>, <span style=color:#e6db74>&#39;burn&#39;</span><span style=color:#f92672>:</span><span style=color:#ae81ff>6</span>};
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>function</span> <span style=color:#a6e22e>preload</span>() {
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>shaderb</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>readShader</span>(<span style=color:#e6db74>&#39;/showcase/sketches/SHADERS/blend/color_blend.frag&#39;</span>,
+</span></span><span style=display:flex><span>  { <span style=color:#a6e22e>matrices</span><span style=color:#f92672>:</span> <span style=color:#a6e22e>Tree</span>.<span style=color:#a6e22e>pmvMatrix</span>, <span style=color:#a6e22e>varyings</span><span style=color:#f92672>:</span> <span style=color:#a6e22e>Tree</span>.<span style=color:#a6e22e>NONE</span> });
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>shadera</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>readShader</span>(<span style=color:#e6db74>&#39;/showcase/sketches/SHADERS/blend/color_add.frag&#39;</span>,
+</span></span><span style=display:flex><span>  { <span style=color:#a6e22e>matrices</span><span style=color:#f92672>:</span> <span style=color:#a6e22e>Tree</span>.<span style=color:#a6e22e>pmvMatrix</span>, <span style=color:#a6e22e>varyings</span><span style=color:#f92672>:</span> <span style=color:#a6e22e>Tree</span>.<span style=color:#a6e22e>NONE</span> });
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>shaderd</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>readShader</span>(<span style=color:#e6db74>&#39;/showcase/sketches/SHADERS/blend/color_darkest.frag&#39;</span>,
+</span></span><span style=display:flex><span>  { <span style=color:#a6e22e>matrices</span><span style=color:#f92672>:</span> <span style=color:#a6e22e>Tree</span>.<span style=color:#a6e22e>pmvMatrix</span>, <span style=color:#a6e22e>varyings</span><span style=color:#f92672>:</span> <span style=color:#a6e22e>Tree</span>.<span style=color:#a6e22e>NONE</span> });
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>shaderl</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>readShader</span>(<span style=color:#e6db74>&#39;/showcase/sketches/SHADERS/blend/color_lightest.frag&#39;</span>,
+</span></span><span style=display:flex><span>  { <span style=color:#a6e22e>matrices</span><span style=color:#f92672>:</span> <span style=color:#a6e22e>Tree</span>.<span style=color:#a6e22e>pmvMatrix</span>, <span style=color:#a6e22e>varyings</span><span style=color:#f92672>:</span> <span style=color:#a6e22e>Tree</span>.<span style=color:#a6e22e>NONE</span> });
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>shaderdif</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>readShader</span>(<span style=color:#e6db74>&#39;/showcase/sketches/SHADERS/blend/color_difference.frag&#39;</span>,
+</span></span><span style=display:flex><span>  { <span style=color:#a6e22e>matrices</span><span style=color:#f92672>:</span> <span style=color:#a6e22e>Tree</span>.<span style=color:#a6e22e>pmvMatrix</span>, <span style=color:#a6e22e>varyings</span><span style=color:#f92672>:</span> <span style=color:#a6e22e>Tree</span>.<span style=color:#a6e22e>NONE</span> });
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>shaderburn</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>readShader</span>(<span style=color:#e6db74>&#39;/showcase/sketches/SHADERS/blend/color_burn.frag&#39;</span>,
+</span></span><span style=display:flex><span>  { <span style=color:#a6e22e>matrices</span><span style=color:#f92672>:</span> <span style=color:#a6e22e>Tree</span>.<span style=color:#a6e22e>pmvMatrix</span>, <span style=color:#a6e22e>varyings</span><span style=color:#f92672>:</span> <span style=color:#a6e22e>Tree</span>.<span style=color:#a6e22e>NONE</span> });
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>function</span> <span style=color:#a6e22e>setup</span>() {
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>createCanvas</span>(<span style=color:#ae81ff>300</span>, <span style=color:#ae81ff>300</span>, <span style=color:#a6e22e>WEBGL</span>);
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>noStroke</span>();
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>modo</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>createSelect</span>();
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>modo</span>.<span style=color:#a6e22e>position</span>(<span style=color:#ae81ff>215</span>, <span style=color:#ae81ff>270</span>);
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>modo</span>.<span style=color:#a6e22e>style</span>(<span style=color:#e6db74>&#39;width&#39;</span>, <span style=color:#e6db74>&#39;90px&#39;</span>);
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>modo</span>.<span style=color:#a6e22e>option</span>(<span style=color:#e6db74>&#39;None&#39;</span>); 
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>modo</span>.<span style=color:#a6e22e>option</span>(<span style=color:#e6db74>&#39;blend&#39;</span>); 
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>modo</span>.<span style=color:#a6e22e>option</span>(<span style=color:#e6db74>&#39;add&#39;</span>);
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>modo</span>.<span style=color:#a6e22e>option</span>(<span style=color:#e6db74>&#39;darkest&#39;</span>);
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>modo</span>.<span style=color:#a6e22e>option</span>(<span style=color:#e6db74>&#39;ligthtest&#39;</span>);
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>modo</span>.<span style=color:#a6e22e>option</span>(<span style=color:#e6db74>&#39;difference&#39;</span>);
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>modo</span>.<span style=color:#a6e22e>option</span>(<span style=color:#e6db74>&#39;burn&#39;</span>);
+</span></span><span style=display:flex><span>  
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>colorPicker1</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>createColorPicker</span>(<span style=color:#e6db74>&#39;blue&#39;</span>);
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>colorPicker1</span>.<span style=color:#a6e22e>position</span>(<span style=color:#ae81ff>0</span>, <span style=color:#ae81ff>0</span>);
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>colorPicker2</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>createColorPicker</span>(<span style=color:#e6db74>&#39;yellow&#39;</span>);
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>colorPicker2</span>.<span style=color:#a6e22e>position</span>(<span style=color:#ae81ff>250</span>, <span style=color:#ae81ff>0</span>);
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>slider</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>createSlider</span>(<span style=color:#ae81ff>0</span>, <span style=color:#ae81ff>1</span>, <span style=color:#ae81ff>0.5</span>, <span style=color:#ae81ff>0.01</span>);
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>slider</span>.<span style=color:#a6e22e>position</span>(<span style=color:#ae81ff>10</span>, <span style=color:#ae81ff>270</span>);
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>slider</span>.<span style=color:#a6e22e>style</span>(<span style=color:#e6db74>&#39;width&#39;</span>, <span style=color:#e6db74>&#39;80px&#39;</span>);
+</span></span><span style=display:flex><span>  
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>function</span> <span style=color:#a6e22e>draw</span>() {
+</span></span><span style=display:flex><span> 
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>translate</span>(<span style=color:#f92672>-</span><span style=color:#ae81ff>150</span>,<span style=color:#f92672>-</span><span style=color:#ae81ff>150</span>);
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>push</span>();
+</span></span><span style=display:flex><span>  
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>uMaterial1</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>colorPicker1</span>.<span style=color:#a6e22e>color</span>()
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>fill</span>(<span style=color:#a6e22e>uMaterial1</span>);
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>beginShape</span>();
+</span></span><span style=display:flex><span>  
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>vertex</span>(<span style=color:#ae81ff>30</span>, <span style=color:#ae81ff>40</span>);
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>vertex</span>(<span style=color:#ae81ff>130</span>, <span style=color:#ae81ff>40</span>);
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>vertex</span>(<span style=color:#ae81ff>130</span>, <span style=color:#ae81ff>140</span>);
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>vertex</span>(<span style=color:#ae81ff>30</span>, <span style=color:#ae81ff>140</span>);
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>endShape</span>();
+</span></span><span style=display:flex><span>  
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>uMaterial2</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>colorPicker2</span>.<span style=color:#a6e22e>color</span>()
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>fill</span>(<span style=color:#a6e22e>uMaterial2</span>);
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>beginShape</span>();
+</span></span><span style=display:flex><span>  
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>vertex</span>(<span style=color:#ae81ff>270</span>, <span style=color:#ae81ff>40</span>);
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>vertex</span>(<span style=color:#ae81ff>170</span>, <span style=color:#ae81ff>40</span>);
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>vertex</span>(<span style=color:#ae81ff>170</span>, <span style=color:#ae81ff>140</span>);
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>vertex</span>(<span style=color:#ae81ff>270</span>, <span style=color:#ae81ff>140</span>);
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>endShape</span>();
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>pop</span>();
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>if</span>(<span style=color:#a6e22e>opcionesS</span>[<span style=color:#a6e22e>modo</span>.<span style=color:#a6e22e>value</span>()] <span style=color:#f92672>==</span> <span style=color:#ae81ff>1</span>){
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>push</span>();
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>shader</span>(<span style=color:#a6e22e>shaderb</span>);
+</span></span><span style=display:flex><span>    
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>beginShape</span>();
+</span></span><span style=display:flex><span>    
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>shaderb</span>.<span style=color:#a6e22e>setUniform</span>(<span style=color:#e6db74>&#39;uMaterial1&#39;</span>, <span style=color:#a6e22e>uMaterial1</span>.<span style=color:#a6e22e>levels</span>);
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>shaderb</span>.<span style=color:#a6e22e>setUniform</span>(<span style=color:#e6db74>&#39;uMaterial2&#39;</span>, <span style=color:#a6e22e>uMaterial2</span>.<span style=color:#a6e22e>levels</span>);
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>shaderb</span>.<span style=color:#a6e22e>setUniform</span>(<span style=color:#e6db74>&#39;brightness&#39;</span>, <span style=color:#a6e22e>slider</span>.<span style=color:#a6e22e>value</span>());
+</span></span><span style=display:flex><span>    
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>vertex</span>(<span style=color:#ae81ff>200</span>, <span style=color:#ae81ff>260</span>);
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>vertex</span>(<span style=color:#ae81ff>100</span>, <span style=color:#ae81ff>260</span>);
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>vertex</span>(<span style=color:#ae81ff>100</span>, <span style=color:#ae81ff>160</span>);
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>vertex</span>(<span style=color:#ae81ff>200</span>, <span style=color:#ae81ff>160</span>);
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>endShape</span>();
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>pop</span>();
+</span></span><span style=display:flex><span>  }
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>else</span> <span style=color:#66d9ef>if</span>(<span style=color:#a6e22e>opcionesS</span>[<span style=color:#a6e22e>modo</span>.<span style=color:#a6e22e>value</span>()] <span style=color:#f92672>==</span> <span style=color:#ae81ff>2</span>){
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>push</span>();
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>shader</span>(<span style=color:#a6e22e>shadera</span>);
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>beginShape</span>();
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>shadera</span>.<span style=color:#a6e22e>setUniform</span>(<span style=color:#e6db74>&#39;uMaterial1&#39;</span>, <span style=color:#a6e22e>uMaterial1</span>.<span style=color:#a6e22e>levels</span>);
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>shadera</span>.<span style=color:#a6e22e>setUniform</span>(<span style=color:#e6db74>&#39;uMaterial2&#39;</span>, <span style=color:#a6e22e>uMaterial2</span>.<span style=color:#a6e22e>levels</span>);
+</span></span><span style=display:flex><span>    
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>vertex</span>(<span style=color:#ae81ff>200</span>, <span style=color:#ae81ff>260</span>);
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>vertex</span>(<span style=color:#ae81ff>100</span>, <span style=color:#ae81ff>260</span>);
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>vertex</span>(<span style=color:#ae81ff>100</span>, <span style=color:#ae81ff>160</span>);
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>vertex</span>(<span style=color:#ae81ff>200</span>, <span style=color:#ae81ff>160</span>);
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>endShape</span>();
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>pop</span>();
+</span></span><span style=display:flex><span>  }
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>else</span> <span style=color:#66d9ef>if</span>(<span style=color:#a6e22e>opcionesS</span>[<span style=color:#a6e22e>modo</span>.<span style=color:#a6e22e>value</span>()] <span style=color:#f92672>==</span> <span style=color:#ae81ff>3</span>){
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>push</span>();
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>shader</span>(<span style=color:#a6e22e>shaderd</span>);
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>beginShape</span>();
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>shaderd</span>.<span style=color:#a6e22e>setUniform</span>(<span style=color:#e6db74>&#39;uMaterial1&#39;</span>, <span style=color:#a6e22e>uMaterial1</span>.<span style=color:#a6e22e>levels</span>);
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>shaderd</span>.<span style=color:#a6e22e>setUniform</span>(<span style=color:#e6db74>&#39;uMaterial2&#39;</span>, <span style=color:#a6e22e>uMaterial2</span>.<span style=color:#a6e22e>levels</span>);
+</span></span><span style=display:flex><span>    
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>vertex</span>(<span style=color:#ae81ff>200</span>, <span style=color:#ae81ff>260</span>);
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>vertex</span>(<span style=color:#ae81ff>100</span>, <span style=color:#ae81ff>260</span>);
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>vertex</span>(<span style=color:#ae81ff>100</span>, <span style=color:#ae81ff>160</span>);
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>vertex</span>(<span style=color:#ae81ff>200</span>, <span style=color:#ae81ff>160</span>);
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>endShape</span>();
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>pop</span>();
+</span></span><span style=display:flex><span>  }
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>else</span> <span style=color:#66d9ef>if</span>(<span style=color:#a6e22e>opcionesS</span>[<span style=color:#a6e22e>modo</span>.<span style=color:#a6e22e>value</span>()] <span style=color:#f92672>==</span> <span style=color:#ae81ff>4</span>){
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>push</span>();
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>shader</span>(<span style=color:#a6e22e>shaderl</span>);
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>beginShape</span>();
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>shaderl</span>.<span style=color:#a6e22e>setUniform</span>(<span style=color:#e6db74>&#39;uMaterial1&#39;</span>, <span style=color:#a6e22e>uMaterial1</span>.<span style=color:#a6e22e>levels</span>);
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>shaderl</span>.<span style=color:#a6e22e>setUniform</span>(<span style=color:#e6db74>&#39;uMaterial2&#39;</span>, <span style=color:#a6e22e>uMaterial2</span>.<span style=color:#a6e22e>levels</span>);
+</span></span><span style=display:flex><span>    
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>vertex</span>(<span style=color:#ae81ff>200</span>, <span style=color:#ae81ff>260</span>);
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>vertex</span>(<span style=color:#ae81ff>100</span>, <span style=color:#ae81ff>260</span>);
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>vertex</span>(<span style=color:#ae81ff>100</span>, <span style=color:#ae81ff>160</span>);
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>vertex</span>(<span style=color:#ae81ff>200</span>, <span style=color:#ae81ff>160</span>);
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>endShape</span>();
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>pop</span>();
+</span></span><span style=display:flex><span>  }
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>else</span> <span style=color:#66d9ef>if</span>(<span style=color:#a6e22e>opcionesS</span>[<span style=color:#a6e22e>modo</span>.<span style=color:#a6e22e>value</span>()] <span style=color:#f92672>==</span> <span style=color:#ae81ff>5</span>){
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>push</span>();
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>shader</span>(<span style=color:#a6e22e>shaderdif</span>);
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>beginShape</span>();
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>shaderdif</span>.<span style=color:#a6e22e>setUniform</span>(<span style=color:#e6db74>&#39;uMaterial1&#39;</span>, <span style=color:#a6e22e>uMaterial1</span>.<span style=color:#a6e22e>levels</span>);
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>shaderdif</span>.<span style=color:#a6e22e>setUniform</span>(<span style=color:#e6db74>&#39;uMaterial2&#39;</span>, <span style=color:#a6e22e>uMaterial2</span>.<span style=color:#a6e22e>levels</span>);
+</span></span><span style=display:flex><span>    
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>vertex</span>(<span style=color:#ae81ff>200</span>, <span style=color:#ae81ff>260</span>);
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>vertex</span>(<span style=color:#ae81ff>100</span>, <span style=color:#ae81ff>260</span>);
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>vertex</span>(<span style=color:#ae81ff>100</span>, <span style=color:#ae81ff>160</span>);
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>vertex</span>(<span style=color:#ae81ff>200</span>, <span style=color:#ae81ff>160</span>);
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>endShape</span>();
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>pop</span>();
+</span></span><span style=display:flex><span>  }
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>else</span> <span style=color:#66d9ef>if</span>(<span style=color:#a6e22e>opcionesS</span>[<span style=color:#a6e22e>modo</span>.<span style=color:#a6e22e>value</span>()] <span style=color:#f92672>==</span> <span style=color:#ae81ff>6</span>){
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>push</span>();
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>shader</span>(<span style=color:#a6e22e>shaderburn</span>);
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>beginShape</span>();
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>shaderburn</span>.<span style=color:#a6e22e>setUniform</span>(<span style=color:#e6db74>&#39;uMaterial1&#39;</span>, <span style=color:#a6e22e>uMaterial1</span>.<span style=color:#a6e22e>levels</span>);
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>shaderburn</span>.<span style=color:#a6e22e>setUniform</span>(<span style=color:#e6db74>&#39;uMaterial2&#39;</span>, <span style=color:#a6e22e>uMaterial2</span>.<span style=color:#a6e22e>levels</span>);
+</span></span><span style=display:flex><span>    
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>vertex</span>(<span style=color:#ae81ff>200</span>, <span style=color:#ae81ff>260</span>);
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>vertex</span>(<span style=color:#ae81ff>100</span>, <span style=color:#ae81ff>260</span>);
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>vertex</span>(<span style=color:#ae81ff>100</span>, <span style=color:#ae81ff>160</span>);
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>vertex</span>(<span style=color:#ae81ff>200</span>, <span style=color:#ae81ff>160</span>);
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>endShape</span>();
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>pop</span>();
+</span></span><span style=display:flex><span>  }
+</span></span><span style=display:flex><span>}</span></span></code></pre></div></div></details><iframe id=color_blend style=width:325px;height:325px srcdoc="
         <!DOCTYPE html>
         <html>
           <head>
@@ -49,5 +211,5 @@ En el sketch a continuación se ve como se alterna entre estos dos modelos de co
           </body>
         </html>
       "></iframe><blockquote class="book-hint warning"><h3 id=referencias><strong>Referencias</strong>
-<a class=anchor href=#referencias>#</a></h3><ul><li><a href=https://www.deepskycolors.com/archive/2010/04/21/formulas-for-Photoshop-blending-modes.html>https://www.deepskycolors.com/archive/2010/04/21/formulas-for-Photoshop-blending-modes.html</a></li><li><a href=https://p5js.org/reference/#/p5/blendMode>https://p5js.org/reference/#/p5/blendMode</a></li><li><a href=https://visualcomputing.github.io/docs/shaders/coloring/>https://visualcomputing.github.io/docs/shaders/coloring/</a></li></ul></blockquote></article><footer class=book-footer><div class="flex flex-wrap justify-between"><div><a class="flex align-center" href=https://github.com/visualcomputing/showcase/commit/5ff6bc77854ff8c9b8bf3d52ed777a496f240571 title='Last modified by Juan Felipe Callejas F | November 26, 2022' target=_blank rel=noopener><img src=/showcase/svg/calendar.svg class=book-icon alt=Calendar>
-<span>November 26, 2022</span></a></div></div><script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script></footer><div class=book-comments></div><label for=menu-control class="hidden book-menu-overlay"></label></div><aside class=book-toc><div class=book-toc-content><nav id=TableOfContents><ul><li><a href=#ejerecicios-coloring><strong>Ejerecicios: Coloring</strong></a><ul><li><a href=#cmy-y-rgb><strong>CMY y RGB</strong></a></li><li><a href=#color-blending><strong>Color Blending</strong></a></li></ul></li></ul></nav></div></aside></main></body></html>
+<a class=anchor href=#referencias>#</a></h3><ul><li><a href=https://www.deepskycolors.com/archive/2010/04/21/formulas-for-Photoshop-blending-modes.html>https://www.deepskycolors.com/archive/2010/04/21/formulas-for-Photoshop-blending-modes.html</a></li><li><a href=https://p5js.org/reference/#/p5/blendMode>https://p5js.org/reference/#/p5/blendMode</a></li><li><a href=https://visualcomputing.github.io/docs/shaders/coloring/>https://visualcomputing.github.io/docs/shaders/coloring/</a></li></ul></blockquote></article><footer class=book-footer><div class="flex flex-wrap justify-between"><div><a class="flex align-center" href=https://github.com/visualcomputing/showcase/commit/7f80da72e7b09634c29860646117f0f47b63b36e title='Last modified by Juan Felipe Callejas F | November 27, 2022' target=_blank rel=noopener><img src=/showcase/svg/calendar.svg class=book-icon alt=Calendar>
+<span>November 27, 2022</span></a></div></div><script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script></footer><div class=book-comments></div><label for=menu-control class="hidden book-menu-overlay"></label></div><aside class=book-toc><div class=book-toc-content><nav id=TableOfContents><ul><li><a href=#ejerecicios-coloring><strong>Ejerecicios: Coloring</strong></a><ul><li><a href=#cmy-y-rgb><strong>CMY y RGB</strong></a></li><li><a href=#color-blending><strong>Color Blending</strong></a></li></ul></li></ul></nav></div></aside></main></body></html>
