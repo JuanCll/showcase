@@ -5,7 +5,7 @@ let Figures;
 let r;
 
 function preload() {
-  shaderAL = readShader("showcase/sketches/SHADERS/Lighting/AL.frag", {
+  shaderAL = readShader("/showcase/sketches/SHADERS/Lighting/AL.frag", {
     varyings: Tree.NONE,
   });
 }
