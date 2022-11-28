@@ -112,4 +112,6 @@ function draw() {
 ### **Referencias**
 - https://en.wikipedia.org/wiki/Computer_graphics_lighting#Object_oriented_lighting
 - https://colinbarrebrisebois.com/2015/11/06/finding-next-gen-part-i-the-need-for-robust-and-fast-global-illumination-in-games/
+- https://visualcomputing.github.io/docs/shaders/lighting/
 {{</hint>}}
+

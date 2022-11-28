@@ -17,4 +17,8 @@ Implement your own source dataset and a mechanism to select different images fro
 
 Este tipo de fenómenos pueden aplicarse para generar un efecto ya sea de enfoque o desenfoque en elementos específicos, como de profundidad y ambientación de espacios.
 
+{{<hint warning>}}
+### **Referencias**
+- https://visualcomputing.github.io/docs/shaders/spatial_coherence/
+{{</hint>}}
 
