@@ -1,7 +1,7 @@
 <!doctype html><html lang=en-us dir=ltr><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="Ejerecicios: Coloring # CMY y RGB # Marco teórico
 RGB es un modelo de color basado en la síntesis aditiva, con el que es posible representar un color mediante la mezcla por adición de los tres colores de luz primarios. El modelo CMY es un modelo de color sustractivo que se utiliza en la impresión en colores. Es la versión moderna y más precisa del antiguo modelo tradicional de coloración (RYB)."><meta name=theme-color content="#FFFFFF"><meta name=color-scheme content="light dark"><meta property="og:title" content><meta property="og:description" content="Ejerecicios: Coloring # CMY y RGB # Marco teórico
-RGB es un modelo de color basado en la síntesis aditiva, con el que es posible representar un color mediante la mezcla por adición de los tres colores de luz primarios. El modelo CMY es un modelo de color sustractivo que se utiliza en la impresión en colores. Es la versión moderna y más precisa del antiguo modelo tradicional de coloración (RYB)."><meta property="og:type" content="article"><meta property="og:url" content="https://visualcomputing.github.io/showcase/docs/shortcodes/Shaders/Color_Blend/"><meta property="article:section" content="docs"><meta property="article:modified_time" content="2022-11-27T17:41:19-05:00"><title>Color Blend | Computación Visual</title><link rel=manifest href=/showcase/manifest.json><link rel=icon href=/showcase/favicon.png type=image/x-icon><link rel=stylesheet href=/showcase/book.min.ab46de3e725a6415339a37bba23a0067534a37289b063c9f8d011515a63097a8.css integrity="sha256-q0bePnJaZBUzmje7ojoAZ1NKNyibBjyfjQEVFaYwl6g=" crossorigin=anonymous><script defer src=/showcase/flexsearch.min.js></script>
-<script defer src=/showcase/en.search.min.8c8d69608584c8abb96f1d8d2ae24fccddb55a362ed504047e77bd56f8434928.js integrity="sha256-jI1pYIWEyKu5bx2NKuJPzN21WjYu1QQEfne9VvhDSSg=" crossorigin=anonymous></script></head><body dir=ltr><input type=checkbox class="hidden toggle" id=menu-control>
+RGB es un modelo de color basado en la síntesis aditiva, con el que es posible representar un color mediante la mezcla por adición de los tres colores de luz primarios. El modelo CMY es un modelo de color sustractivo que se utiliza en la impresión en colores. Es la versión moderna y más precisa del antiguo modelo tradicional de coloración (RYB)."><meta property="og:type" content="article"><meta property="og:url" content="https://visualcomputing.github.io/showcase/docs/shortcodes/Shaders/Color_Blend/"><meta property="article:section" content="docs"><meta property="article:modified_time" content="2022-11-27T23:20:51-05:00"><title>Color Blend | Computación Visual</title><link rel=manifest href=/showcase/manifest.json><link rel=icon href=/showcase/favicon.png type=image/x-icon><link rel=stylesheet href=/showcase/book.min.ab46de3e725a6415339a37bba23a0067534a37289b063c9f8d011515a63097a8.css integrity="sha256-q0bePnJaZBUzmje7ojoAZ1NKNyibBjyfjQEVFaYwl6g=" crossorigin=anonymous><script defer src=/showcase/flexsearch.min.js></script>
+<script defer src=/showcase/en.search.min.bc0808d5ae331fde65d1385e75952278ca0119a5ca3f9012ef7446b671ea44f3.js integrity="sha256-vAgI1a4zH95l0ThedZUieMoBGaXKP5AS73RGtnHqRPM=" crossorigin=anonymous></script></head><body dir=ltr><input type=checkbox class="hidden toggle" id=menu-control>
 <input type=checkbox class="hidden toggle" id=toc-control><main class="container flex"><aside class=book-menu><div class=book-menu-content><nav><h2 class=book-brand><a class="flex align-center" href=/showcase/><span>Computación Visual</span></a></h2><div class=book-search><input type=text id=book-search-input placeholder=Search aria-label=Search maxlength=64 data-hotkeys=s/><div class="book-search-spinner hidden"></div><ul id=book-search-results></ul></div><ul><li class=book-section-flat><span>Shortcodes</span><ul><li><input type=checkbox id=section-37d133451a87125afc7e4d4a60cdb12b class=toggle checked>
 <label for=section-37d133451a87125afc7e4d4a60cdb12b class="flex justify-between"><a role=button>Shaders</a></label><ul><li><a href=/showcase/docs/shortcodes/Shaders/Color_Blend/ class=active>Color Blend</a></li><li><a href=/showcase/docs/shortcodes/Shaders/Lighting/>Lighting</a></li><li><a href=/showcase/docs/shortcodes/Shaders/Photomosaic/>Photomosaic</a></li><li><a href=/showcase/docs/shortcodes/Shaders/Procedural_texturing/>Procedural Texturing</a></li><li><a href=/showcase/docs/shortcodes/Shaders/Spatial_Coherence/>Spatial Coherence</a></li><li><a href=/showcase/docs/shortcodes/Shaders/Texturing/>Texturing</a></li></ul></li><li><input type=checkbox id=section-40370cffa0e58f63b3d83ad764ed10f8 class=toggle>
 <label for=section-40370cffa0e58f63b3d83ad764ed10f8 class="flex justify-between"><a role=button>Workshop 1</a></label><ul><li><a href=/showcase/docs/shortcodes/Workshop_1/Ilusiones/>Ilusiones</a></li><li><a href=/showcase/docs/shortcodes/Workshop_1/Masking/>Masking</a></li></ul></li><li><input type=checkbox id=section-b0370d58c5138517cd7aed0c003453ef class=toggle>
@@ -9,9 +9,7 @@ RGB es un modelo de color basado en la síntesis aditiva, con el que es posible 
 <strong>Color Blend</strong>
 <label for=toc-control><img src=/showcase/svg/toc.svg class=book-icon alt="Table of Contents"></label></div><aside class="hidden clearfix"><nav id=TableOfContents><ul><li><a href=#ejerecicios-coloring><strong>Ejerecicios: Coloring</strong></a><ul><li><a href=#cmy-y-rgb><strong>CMY y RGB</strong></a></li><li><a href=#color-blending><strong>Color Blending</strong></a></li></ul></li></ul></nav></aside></header><article class=markdown><h1 id=ejerecicios-coloring><strong>Ejerecicios: Coloring</strong>
 <a class=anchor href=#ejerecicios-coloring>#</a></h1><h2 id=cmy-y-rgb><strong>CMY y RGB</strong>
-<a class=anchor href=#cmy-y-rgb>#</a></h2><p><strong>Marco teórico</strong></p><p>RGB es un modelo de color basado en la síntesis aditiva, con el que es posible representar un color mediante la mezcla por adición de los tres colores de luz primarios.
-El modelo CMY es un modelo de color sustractivo que se utiliza en la impresión en colores. Es la versión moderna y más precisa del antiguo modelo tradicional de coloración (RYB).
-En el sketch a continuación se ve como se alterna entre estos dos modelos de color.</p><p><strong>Resultados</strong></p><iframe id=CMYt style=width:325px;height:325px srcdoc="
+<a class=anchor href=#cmy-y-rgb>#</a></h2><p><strong>Marco teórico</strong></p><ul><li>RGB es un modelo de color basado en la síntesis aditiva, con el que es posible representar un color mediante la mezcla por adición de los tres colores de luz primarios.</li><li>El modelo CMY es un modelo de color sustractivo que se utiliza en la impresión en colores. Es la versión moderna y más precisa del antiguo modelo tradicional de coloración (RYB).<br>En el sketch a continuación se ve como se alterna entre estos dos modelos de color.</li></ul><p><strong>Resultados</strong></p><iframe id=CMYt style=width:325px;height:325px srcdoc="
         <!DOCTYPE html>
         <html>
           <head>
@@ -30,7 +28,27 @@ En el sketch a continuación se ve como se alterna entre estos dos modelos de co
           </body>
         </html>
       "></iframe><h2 id=color-blending><strong>Color Blending</strong>
-<a class=anchor href=#color-blending>#</a></h2><p>Aplicación de diferentes modos de blend</p><details><summary>blending js</summary><div class=markdown-inner><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-js data-lang=js><span style=display:flex><span><span style=color:#66d9ef>let</span> <span style=color:#a6e22e>shaderb</span>;
+<a class=anchor href=#color-blending>#</a></h2><p><strong>Marco teórico</strong></p><p>El <em><a href=https://cglearn.codelight.eu/pub/computer-graphics/blending>Color Blending</a></em> es una manera de mezcalr dos colores, produciendo un tercer color. Los colores son llados <em>fuente</em> y <em>destino</em>, y se presentan en forma [R,G,B,A], donde estos valores se encuentran entre 0 y 1.</p><p><strong>Resultados</strong>
+<iframe id=color_blend style=width:325px;height:325px srcdoc="
+        <!DOCTYPE html>
+        <html>
+          <head>
+            <script src=https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.2/p5.min.js></script>
+            <script src=https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.2/addons/p5.sound.min.js></script>
+            <script src=https://cdn.jsdelivr.net/gh/VisualComputing/p5.treegl/p5.treegl.js></script>
+            <script src=https://cdn.jsdelivr.net/gh/freshfork/p5.EasyCam@1.2.1/p5.easycam.js></script>
+            
+            
+            
+            
+            
+            <script src=/showcase/sketches/SHADERS/blend/color_blend.js></script>
+          </head>
+          <body>
+          </body>
+        </html>
+      "></iframe>
+<details><summary>blending js</summary><div class=markdown-inner><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-js data-lang=js><span style=display:flex><span><span style=color:#66d9ef>let</span> <span style=color:#a6e22e>shaderb</span>;
 </span></span><span style=display:flex><span><span style=color:#66d9ef>let</span> <span style=color:#a6e22e>shadera</span>;
 </span></span><span style=display:flex><span><span style=color:#66d9ef>let</span> <span style=color:#a6e22e>uMaterial1</span>;
 </span></span><span style=display:flex><span><span style=color:#66d9ef>let</span> <span style=color:#a6e22e>uMaterial2</span>;
@@ -192,24 +210,6 @@ En el sketch a continuación se ve como se alterna entre estos dos modelos de co
 </span></span><span style=display:flex><span>    <span style=color:#a6e22e>endShape</span>();
 </span></span><span style=display:flex><span>    <span style=color:#a6e22e>pop</span>();
 </span></span><span style=display:flex><span>  }
-</span></span><span style=display:flex><span>}</span></span></code></pre></div></div></details><iframe id=color_blend style=width:325px;height:325px srcdoc="
-        <!DOCTYPE html>
-        <html>
-          <head>
-            <script src=https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.2/p5.min.js></script>
-            <script src=https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.2/addons/p5.sound.min.js></script>
-            <script src=https://cdn.jsdelivr.net/gh/VisualComputing/p5.treegl/p5.treegl.js></script>
-            <script src=https://cdn.jsdelivr.net/gh/freshfork/p5.EasyCam@1.2.1/p5.easycam.js></script>
-            
-            
-            
-            
-            
-            <script src=/showcase/sketches/SHADERS/blend/color_blend.js></script>
-          </head>
-          <body>
-          </body>
-        </html>
-      "></iframe><blockquote class="book-hint warning"><h3 id=referencias><strong>Referencias</strong>
-<a class=anchor href=#referencias>#</a></h3><ul><li><a href=https://www.deepskycolors.com/archive/2010/04/21/formulas-for-Photoshop-blending-modes.html>https://www.deepskycolors.com/archive/2010/04/21/formulas-for-Photoshop-blending-modes.html</a></li><li><a href=https://p5js.org/reference/#/p5/blendMode>https://p5js.org/reference/#/p5/blendMode</a></li><li><a href=https://visualcomputing.github.io/docs/shaders/coloring/>https://visualcomputing.github.io/docs/shaders/coloring/</a></li></ul></blockquote></article><footer class=book-footer><div class="flex flex-wrap justify-between"><div><a class="flex align-center" href=https://github.com/visualcomputing/showcase/commit/7f80da72e7b09634c29860646117f0f47b63b36e title='Last modified by Juan Felipe Callejas F | November 27, 2022' target=_blank rel=noopener><img src=/showcase/svg/calendar.svg class=book-icon alt=Calendar>
-<span>November 27, 2022</span></a></div></div><script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script></footer><div class=book-comments></div><label for=menu-control class="hidden book-menu-overlay"></label></div><aside class=book-toc><div class=book-toc-content><nav id=TableOfContents><ul><li><a href=#ejerecicios-coloring><strong>Ejerecicios: Coloring</strong></a><ul><li><a href=#cmy-y-rgb><strong>CMY y RGB</strong></a></li><li><a href=#color-blending><strong>Color Blending</strong></a></li></ul></li></ul></nav></div></aside></main></body></html>
+</span></span><span style=display:flex><span>}</span></span></code></pre></div></div></details></p><p><strong>Conclusiones</strong></p><ul><li>Los colores y su manejo en la computación, representan no solo una amplia cantidad de conceptos de tipo matemático, si no también una amplica gama de posibilidades ante la capacidad de su configuración y mezcla, como se pudo ver en los ejericios presentados.</li></ul><blockquote class="book-hint warning"><h3 id=referencias><strong>Referencias</strong>
+<a class=anchor href=#referencias>#</a></h3><ul><li><a href=https://www.deepskycolors.com/archive/2010/04/21/formulas-for-Photoshop-blending-modes.html>https://www.deepskycolors.com/archive/2010/04/21/formulas-for-Photoshop-blending-modes.html</a></li><li><a href=https://p5js.org/reference/#/p5/blendMode>https://p5js.org/reference/#/p5/blendMode</a></li><li><a href=https://visualcomputing.github.io/docs/shaders/coloring/>https://visualcomputing.github.io/docs/shaders/coloring/</a></li><li><a href=https://cglearn.codelight.eu/pub/computer-graphics/blending>https://cglearn.codelight.eu/pub/computer-graphics/blending</a></li></ul></blockquote></article><footer class=book-footer><div class="flex flex-wrap justify-between"><div><a class="flex align-center" href=https://github.com/visualcomputing/showcase/commit/d1fa26f01857e1b314f369ef6b606b5dfafe977c title='Last modified by jlizarazoa | November 28, 2022' target=_blank rel=noopener><img src=/showcase/svg/calendar.svg class=book-icon alt=Calendar>
+<span>November 28, 2022</span></a></div></div><script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script></footer><div class=book-comments></div><label for=menu-control class="hidden book-menu-overlay"></label></div><aside class=book-toc><div class=book-toc-content><nav id=TableOfContents><ul><li><a href=#ejerecicios-coloring><strong>Ejerecicios: Coloring</strong></a><ul><li><a href=#cmy-y-rgb><strong>CMY y RGB</strong></a></li><li><a href=#color-blending><strong>Color Blending</strong></a></li></ul></li></ul></nav></div></aside></main></body></html>
