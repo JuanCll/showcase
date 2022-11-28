@@ -103,6 +103,25 @@ function draw() {
 {{< /highlight >}}
 {{< /details >}}
 
+{{< details title="ambient.frag" open=false >}}
+{{< highlight js >}}
+
+precision mediump float;
+
+// emitted by p5 color-group commands
+// https://p5js.org/reference/#group-Color
+uniform vec4 uMaterialColor;
+uniform vec4 lightColor;
+uniform float ambient;
+
+void main() {
+  vec4 ambient4 = lightColor * ambient;
+  gl_FragColor = ambient * ambient4 * uMaterialColor;
+}
+
+{{< /highlight >}}
+{{< /details >}}
+
 
 **Conclusión**
 
