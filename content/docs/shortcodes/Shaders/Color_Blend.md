@@ -1,4 +1,4 @@
-# **Ejerecicios: Coloring**
+# **Ejercicios: Coloring**
 
 ## **CMY y RGB**
 
