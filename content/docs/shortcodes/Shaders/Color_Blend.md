@@ -19,6 +19,7 @@ En el sketch a continuación se ve como se alterna entre estos dos modelos de co
 El _[Color Blending](https://cglearn.codelight.eu/pub/computer-graphics/blending)_ es una manera de mezclar dos colores, produciendo un tercer color. Los colores son llamados _fuente_ y _destino_, y se presentan en forma [R,G,B,A], donde estos valores se encuentran entre 0 y 1.
 
 **Resultados**
+
 {{< p5-iframe sketch="/showcase/sketches/SHADERS/blend/color_blend.js" width="325" height="325" >}}
 {{< details title="blending js" open=false >}}
 {{< highlight js >}}
@@ -186,6 +187,32 @@ function draw() {
   }
 }
 
+{{< /highlight >}}
+{{< /details >}}
+
+{{< details title="blending add frag" open=false >}}
+{{< highlight js >}}
+precision mediump float;
+
+uniform vec4 uMaterial1;
+uniform vec4 uMaterial2;
+
+void main() {
+  gl_FragColor = uMaterial1 + uMaterial2;
+}
+{{< /highlight >}}
+{{< /details >}}
+
+{{< details title="blending difference frag" open=false >}}
+{{< highlight js >}}
+precision mediump float;
+
+uniform vec4 uMaterial1;
+uniform vec4 uMaterial2;
+
+void main() {
+  gl_FragColor = max(uMaterial1, uMaterial2) - min(uMaterial1, uMaterial2);
+}
 {{< /highlight >}}
 {{< /details >}}
 
