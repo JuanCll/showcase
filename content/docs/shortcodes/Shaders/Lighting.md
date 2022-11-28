@@ -1,15 +1,15 @@
 # **Lighting**
 
-Gracias a la [iluminación en la computación grafica](https://en.wikipedia.org/wiki/Computer_graphics_lighting) se puede llegar a dar más detalle a los materias, imágenes y figuras recreadas en un programa.
+Gracias a la [iluminación en la computación grafica](https://en.wikipedia.org/wiki/Computer_graphics_lighting) se puede llegar a dar más detalle a los materiales, imágenes y figuras recreadas en un programa.
 
-Existen dos principales modelos de iluminación, Object oriented lighting (iluminación directa) y Global illumination (iluminación indirecta), el primero es usar una iluminación para un solo objeto, mientras en la segunda da luz a toda la "escena"
+Existen dos principales modelos de iluminación, _Object oriented lighting_ (iluminación directa) y _Global illumination_ (iluminación indirecta), el primero se define como el usar una iluminación para un solo objeto, mientras en la segunda da luz a toda la _escena_.
 
 ![Imagen columnas](https://imgur.com/YHWZPJt.png)
 
 {{<hint info>}}
 **Exercise Colored Ambient light**
 
-Implement a scene having the following lighting equation: \mathbf{a} = ambient \, ambient4a=ambientambient4, where ambient4ambient4 is the ambient light color.
+Implement a scene having the following lighting equation: $\mathbf{a} = ambient \, ambient4a=ambientambient4$, where _ambient4ambient4_ is the ambient light color.
 {{</hint>}}
 
 
@@ -106,7 +106,7 @@ function draw() {
 
 **Conclusión**
 
-- La iluminación es un complemento muy poderoso al momento de crear un escenario gráfico y dependiendo de la firma de su implementación se puede dar diferentes efectos, como una luz tenue puede crear un ambiente terrorífico y iluminación potente en el mismo escenario logra cambiar la temática.
+- La iluminación es un complemento muy poderoso al momento de crear un escenario gráfico y, dependiendo de la forma de su implementación, se pueden generar diferentes efectos, como una luz tenue puede crear un ambiente terrorífico, mientras que una iluminación potente en el mismo escenario podría dar la impresión de una temática diferente.
 
 {{<hint warning>}}
 ### **Referencias**
