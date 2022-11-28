@@ -16,7 +16,7 @@ Implement a scene having the following lighting equation: \mathbf{a} = ambient \
 {{< p5-iframe sketch="/showcase/sketches/SHADERS/Lighting/AL.js" width="430" height="430" >}}
 
 {{< details title="ambient.js" open=false >}}
-{{< Ambient js >}}
+{{< highlight js >}}
 
 let shaderAL;
 let Slider1,Slider2;
