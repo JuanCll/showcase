@@ -1,4 +1,6 @@
-# **Spacial Coherence**
+# **Spatial Coherence**
+
+
 
 {{<hint info>}}
 **Exercise**

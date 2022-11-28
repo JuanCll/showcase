@@ -1,6 +1,6 @@
 let shaderAL;
 let Slider1,Slider2;
-let ColorPicker1;
+let ColorPicker1,ColorPicker2;
 let Figures;
 let r;
 
@@ -47,6 +47,9 @@ function setup() {
     ]);
   });
 
+  ColorPicker2 = createColorPicker("#FFFFFF");
+  ColorPicker2.position(350,65);
+
   shader(shaderAL);
   shaderAL.setUniform("ambient", Slider1.value());
   shaderAL.setUniform("lightColor", [1, 1, 1, 1]);
@@ -54,7 +57,7 @@ function setup() {
 
 function draw() {
   orbitControl();
-  background("WHITE");
+  background(ColorPicker2.color());
   resetShader();
   push();
   stroke("BLACK");

@@ -14,7 +14,7 @@ Implement a mosaic (or/and ascii art) visual application.
 {{</hint>}}
 
 
-{{< p5-iframe sketch="/showcase/sketches/SHADERS/Photomosaic/basic_photomosaic.js" width="425" height="455" >}}
+{{< p5-iframe sketch="/showcase/sketches/SHADERS/Photomosaic/basic_photomosaic.js" width="425" height="435" >}}
 
 {{< details title="photomosaic.js" open=false >}}
 {{< highlight js >}}
