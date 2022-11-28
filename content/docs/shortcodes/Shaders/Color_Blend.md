@@ -4,8 +4,8 @@
 
 **Marco teórico**
 
-RGB es un modelo de color basado en la síntesis aditiva, con el que es posible representar un color mediante la mezcla por adición de los tres colores de luz primarios.
-El modelo CMY es un modelo de color sustractivo que se utiliza en la impresión en colores. Es la versión moderna y más precisa del antiguo modelo tradicional de coloración (RYB).
+- RGB es un modelo de color basado en la síntesis aditiva, con el que es posible representar un color mediante la mezcla por adición de los tres colores de luz primarios.
+- El modelo CMY es un modelo de color sustractivo que se utiliza en la impresión en colores. Es la versión moderna y más precisa del antiguo modelo tradicional de coloración (RYB).\
 En el sketch a continuación se ve como se alterna entre estos dos modelos de color. 
 
 **Resultados**
@@ -14,8 +14,12 @@ En el sketch a continuación se ve como se alterna entre estos dos modelos de co
 
 ## **Color Blending**
 
-Aplicación de diferentes modos de blend 
+**Marco teórico**
 
+El _[Color Blending](https://cglearn.codelight.eu/pub/computer-graphics/blending)_ es una manera de mezcalr dos colores, produciendo un tercer color. Los colores son llados _fuente_ y _destino_, y se presentan en forma [R,G,B,A], donde estos valores se encuentran entre 0 y 1.
+
+**Resultados**
+{{< p5-iframe sketch="/showcase/sketches/SHADERS/blend/color_blend.js" width="325" height="325" >}}
 {{< details title="blending js" open=false >}}
 {{< highlight js >}}
 let shaderb;
@@ -185,7 +189,9 @@ function draw() {
 {{< /highlight >}}
 {{< /details >}}
 
-{{< p5-iframe sketch="/showcase/sketches/SHADERS/blend/color_blend.js" width="325" height="325" >}}
+**Conclusiones**
+
+- Los colores y su manejo en la computación, representan no solo una amplia cantidad de conceptos de tipo matemático, si no también una amplica gama de posibilidades ante la capacidad de su configuración y mezcla, como se pudo ver en los ejericios presentados.
 
 
 {{<hint warning>}}
@@ -193,6 +199,7 @@ function draw() {
 - https://www.deepskycolors.com/archive/2010/04/21/formulas-for-Photoshop-blending-modes.html
 - https://p5js.org/reference/#/p5/blendMode
 - https://visualcomputing.github.io/docs/shaders/coloring/
+- https://cglearn.codelight.eu/pub/computer-graphics/blending
 
 {{</hint >}}
 
