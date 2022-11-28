@@ -3,7 +3,7 @@ const density = 'Ñ@#W$9876543210?!abc;:+=-,._ ';
 let image;
 
 function preload() {
-  image = loadImage("./ahh.jpg");
+  image = loadImage("`/showcase/sketches/image.jpg`");
 }
 
 function setup() {
