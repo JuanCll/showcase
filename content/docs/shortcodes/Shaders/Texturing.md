@@ -1,4 +1,4 @@
-# **Ejerecicios: Texturing**
+# **Ejercicios: Texturing**
 
 ## **UV Visualization**
 {{<hint info>}}
@@ -23,11 +23,9 @@ HSL( hue, saturation, lightness) y HSV ( hue, saturation, value o HSB con bright
 - Hue (Tono): Es el color mismo, definido físicamente por una longitud de onda.
 - Saturation (Saturación): Es qué tan puro o intenso es ese matiz. Entre menos intenso fuera este tono, el resultado sería que el color percibido tendería al gris.
 - Lightness (Luminosidad): Es la intensidad lumínica. Una gran intensidad es muy brillante y la percibimos como blanco y, si no hay intensidad o luz, se vuelve negro.
-- Value (Valor):Representa la altura en el eje blanco-negro. Los valores posibles van del 0 al 100%. 0 siempre es negro.
-
-Luma: es el promedio ponderado de los valores RGB, basado en su contribución a la luminosidad percibida. Este se ha utilizado frecuentemente en la televisión.
-
-Component average: es el promedio de los valores RGB.
+- Value (Valor): Representa la altura en el eje blanco-negro. Los valores posibles van del 0 al 100%. 0 siempre es negro.
+- Luma: es el promedio ponderado de los valores RGB, basado en su contribución a la luminosidad percibida. Este se ha utilizado frecuentemente en la televisión.
+- Component average: es el promedio de los valores RGB.
 
 {{< details title="texture sampling js" open=false >}}
 {{< highlight js >}}
