@@ -1,7 +1,8 @@
 ## **Procedural texturing**
 
-En computación gráfica, una textura procedimental es una textura creada mediante una descripción matemática (es decir, un algoritmo) en lugar de datos almacenados directamente. La ventaja de este enfoque es el bajo coste de almacenamiento, la resolución ilimitada de las texturas y la facilidad de mapeo de las mismas.
+En computación gráfica, una [textura procedimental](https://en.wikipedia.org/wiki/Procedural_texture) es una textura creada mediante una descripción matemática (es decir, un algoritmo), en lugar de datos almacenados directamente. La ventaja de este enfoque es el bajo coste de almacenamiento, la resolución ilimitada de las texturas y la facilidad de mapeo de las mismas.
 
+{{< p5-iframe sketch="/showcase/sketches/SHADERS/texturing/texturing.js" width="425" height="425" >}}
 {{< details title="procedural texturing js" open=false >}}
 {{< highlight js >}}
 let pg;
@@ -198,10 +199,13 @@ void main (void) {
 {{< /highlight >}}
 {{< /details >}}
 
-{{< p5-iframe sketch="/showcase/sketches/SHADERS/texturing/texturing.js" width="425" height="425" >}}
+**Aplicaciones**
+
+Este tipo de texturas son utilizadas, debido a sus características, para el modelamiento de representaciones superficiales de elementos naturales, como lo podrían ser madera, mármol, piera, entre otros. Es por esto, que esta forma de representación podría ser utilizada en la ambientación de espacios, sobretodo en aquellos que, por sus mecánicas, pudieran requerir alto dinamismo y velocidad.
 
 **Conclusiones**
 
+- Las texturas procedimentales son una muestra de que existen mecanismos para el modelamiento de diferentes elementos de maneras altamente eficientes y efectivas.
 - El uso de las texturas sobre sólidos permite emular elementos o estructuras para generar ambientación.
 
 {{<hint warning>}}
