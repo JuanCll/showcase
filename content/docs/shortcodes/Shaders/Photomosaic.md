@@ -1,4 +1,4 @@
-# **Ejercicios: Photomosaic*
+# **Ejercicios: Photomosaic**
 
 ## **ASCII art**
 
