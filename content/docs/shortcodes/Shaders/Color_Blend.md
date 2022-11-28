@@ -16,7 +16,7 @@ En el sketch a continuación se ve como se alterna entre estos dos modelos de co
 
 **Marco teórico**
 
-El _[Color Blending](https://cglearn.codelight.eu/pub/computer-graphics/blending)_ es una manera de mezcalr dos colores, produciendo un tercer color. Los colores son llados _fuente_ y _destino_, y se presentan en forma [R,G,B,A], donde estos valores se encuentran entre 0 y 1.
+El _[Color Blending](https://cglearn.codelight.eu/pub/computer-graphics/blending)_ es una manera de mezclar dos colores, produciendo un tercer color. Los colores son llamados _fuente_ y _destino_, y se presentan en forma [R,G,B,A], donde estos valores se encuentran entre 0 y 1.
 
 **Resultados**
 {{< p5-iframe sketch="/showcase/sketches/SHADERS/blend/color_blend.js" width="325" height="325" >}}
@@ -191,7 +191,7 @@ function draw() {
 
 **Conclusiones**
 
-- Los colores y su manejo en la computación, representan no solo una amplia cantidad de conceptos de tipo matemático, si no también una amplica gama de posibilidades ante la capacidad de su configuración y mezcla, como se pudo ver en los ejericios presentados.
+- Los colores y su manejo en la computación, representan no solo una amplia cantidad de conceptos de tipo matemático, si no también una amplica gama de posibilidades ante la capacidad de su configuración y mezcla, como se pudo ver en los ejercicios presentados.
 
 
 {{<hint warning>}}
