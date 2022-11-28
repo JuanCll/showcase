@@ -71,7 +71,7 @@ function draw() {
 **Conclusiones**
 
 - Existen múltiples maneras de transmitir información en forma de imágenes, a pesar de no contar con los medios visuales usualmente utilizados para este fin.
-- El arte ASCII se puede utilizar para mostrar imágenes añadiendoles diferentes efectos segun la intencion, o para ocultar o censurar algunos detalles de la imagen.
+- El arte ASCII se puede utilizar para mostrar imágenes añadiéndoles diferentes efectos según la intención, y para ocultar o censurar algunos detalles de la imagen.
 
 {{<hint warning>}}
 ### **Referencias**
