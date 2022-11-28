@@ -14,36 +14,39 @@ Implement a mosaic (or/and ascii art) visual application.
 {{</hint>}}
 
 
-{{< p5-iframe sketch="/showcase/sketches/SHADERS/Photomosaic/basic_photomosaic.js" width="325" height="325" >}}
+{{< p5-iframe sketch="/showcase/sketches/SHADERS/Photomosaic/basic_photomosaic.js" width="425" height="455" >}}
 
 {{< details title="photomosaic.js" open=false >}}
 {{< highlight js >}}
 
-
-const density = 'Ñ@#W$9876543210?!abc;:+=-,._ ';
-let image;
+const density = 'ABCDEFGHIJKLMNOPQRSTUV@+-=_.   ';
+let imagen;
 
 function preload() {
-  image = loadImage("./ahh.jpg");
+  imagen = loadImage("/showcase/sketches/image.jpg");
 }
 
 function setup() {
   createCanvas(400, 400); 
+  //ascii = createCheckbox('ascii', false);
 }
 
 function draw() {
-  background(0);
+  //background(0);
   
-  let w = width / image.width;
+  let w = width / imagen.width;
   
-  let h = height / image.height;
-  image.loadPixels();
-  for (let i = 0; i < image.width; i++) {
-    for (let j = 0; j < image.height; j++) {
-      const pixelIndex = (i + j * image.width) * 4;
-      const r = image.pixels[pixelIndex + 0];
-      const g = image.pixels[pixelIndex + 1];
-      const b = image.pixels[pixelIndex + 2];
+  let h = height / imagen.height;
+  imagen.loadPixels();
+  //image(imagen, 0, 0, imagen.width * 9, imagen.height * 9);
+  image(imagen,0,0);
+
+  for (let i = 0; i < imagen.width; i++) {
+    for (let j = 0; j < imagen.height; j++) {
+      const pixelIndex = (i + j * imagen.width) * 4;
+      const r = imagen.pixels[pixelIndex + 0];
+      const g = imagen.pixels[pixelIndex + 1];
+      const b = imagen.pixels[pixelIndex + 2];
       const avg = (r + g + b) / 3;
       
       noStroke();
@@ -54,14 +57,13 @@ function draw() {
       
       textSize(w);
       textAlign(CENTER, CENTER);
+      fill(r,g,b);
       text(density.charAt(charIndex), i * w + w * 0.5, j * h + h * 0.5);
-      
-      
+
     }
   }
-  
-  
 }
+
 {{< /highlight >}}
 {{< /details >}}
 
@@ -69,7 +71,7 @@ function draw() {
 **Conclusiones**
 
 - Existen múltiples maneras de transmitir información en forma de imágenes, a pesar de no contar con los medios visuales usualmente utilizados para este fin.
-- 
+- El arte ASCII se puede utilizar para mostrar imágenes añadiendoles diferentes efectos segun la intencion, o para ocultar o censurar algunos detalles de la imagen.
 
 {{<hint warning>}}
 ### **Referencias**
