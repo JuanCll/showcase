@@ -65,3 +65,7 @@ void main() {
 **Resultados**
 
 Enlace a los Backrooms:  [INSIDE THE BACKROOMS](https://sansanchezmo.github.io/SHADERS/BACKROOMS/index.html)
+
+**Conclusiones**
+- A partir de la experimetación realizada en este proyecto, pueden verse algunas aplicaciones de _shaders_, con el fin de mejorar y terminar el ambiente creado previamente.
+- La interpretación o percepción que puede tenerse sobre cualquier tipo de contenido visual o audiovisual puede ser fácilmente manipulado si se tienen en cuenta aspectos importantes como lo son la iluminación, el movimiento y la dinámica de la composición.
