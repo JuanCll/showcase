@@ -187,9 +187,6 @@ function draw() {
   }
 }
 
-{{< /highlight >}}
-{{< /details >}}
-
 {{< details title="blending add frag" open=false >}}
 {{< highlight js >}}
 precision mediump float;
