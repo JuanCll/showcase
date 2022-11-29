@@ -186,6 +186,8 @@ function draw() {
     pop();
   }
 }
+{{< /highlight >}}
+{{< /details >}}
 
 {{< details title="blending add frag" open=false >}}
 {{< highlight js >}}
@@ -213,49 +215,6 @@ void main() {
 {{< /highlight >}}
 {{< /details >}}
 
-{{< details title="blending frag" open=false >}}
-{{< highlight js >}}
-precision mediump float;
-
-uniform float brightness;
-uniform vec4 uMaterial1;
-uniform vec4 uMaterial2;
-
-
-void main() {
-  gl_FragColor = brightness * uMaterial1 * uMaterial2;
-}
-{{< /highlight >}}
-{{< /details >}}
-
-{{< /details >}}
-
-{{< details title="blending burn frag" open=false >}}
-{{< highlight js >}}
-precision mediump float;
-
-uniform vec4 uMaterial1;
-uniform vec4 uMaterial2;
-
-void main() {
-  gl_FragColor = max((1.0-((1.0-uMaterial1)/uMaterial2)),0.0);
-}
-{{< /highlight >}}
-{{< /details >}}
-
-{{< details title="blending darkest frag" open=false >}}
-{{< highlight js >}}
-precision mediump float;
-
-uniform vec4 uMaterial1;
-uniform vec4 uMaterial2;
-
-void main() {
-  gl_FragColor = min(uMaterial1, uMaterial2);
-}
-{{< /highlight >}}
-{{< /details >}}
-
 {{< details title="blending lightest frag" open=false >}}
 {{< highlight js >}}
 precision mediump float;
@@ -269,7 +228,6 @@ void main() {
 
 {{< /highlight >}}
 {{< /details >}}
-
 **Conclusiones**
 
 - Los colores y su manejo en la computación, representan no solo una amplia cantidad de conceptos de tipo matemático, si no también una amplica gama de posibilidades ante la capacidad de su configuración y mezcla, como se pudo ver en los ejercicios presentados.
