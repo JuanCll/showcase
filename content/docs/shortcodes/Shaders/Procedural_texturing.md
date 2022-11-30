@@ -261,5 +261,6 @@ Este tipo de texturas son utilizadas, debido a sus características, para el mod
 {{<hint warning>}}
 **Referencias**
 - https://en.wikipedia.org/wiki/Procedural_texture
-- https://thebookofshaders.com/edit.php?log=161127235422
+- Shaders tomados de The Book of Shaders, https://thebookofshaders.com/09/
+-  Fuente shader plasma: https://thebookofshaders.com/edit.php?log=161127235422
 {{</hint>}}
