@@ -177,7 +177,7 @@ function myCheckedEvent() {
 {{< /highlight >}}
 {{< /details >}}
 
-{{< details title="UV 3D js" open=false >}}
+{{< details title="UV 3D frag" open=false >}}
 {{< highlight js >}}
 precision mediump float;
 
